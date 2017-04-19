@@ -1,0 +1,18 @@
+Running main() from gtest_main.cc
+[==========] Running 2 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 2 tests from StackwalkerAddressListTest
+[ RUN      ] StackwalkerAddressListTest.ScanWithoutSymbols
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: module2|module2
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+[       OK ] StackwalkerAddressListTest.ScanWithoutSymbols (0 ms)
+[ RUN      ] StackwalkerAddressListTest.ScanWithSymbols
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module2 from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] StackwalkerAddressListTest.ScanWithSymbols (0 ms)
+[----------] 2 tests from StackwalkerAddressListTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 2 tests.
+PASS src/processor/stackwalker_address_list_unittest (exit status: 0)

@@ -1,0 +1,18 @@
+[==========] Running 3 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 3 tests from TestStaticCRMMap
+[ RUN      ] TestStaticCRMMap.TestEmptyMap
+2017-04-17 16:30:44: static_contained_range_map_unittest.cc:230: INFO: Serialized data size: 928 Bytes.
+[       OK ] TestStaticCRMMap.TestEmptyMap (0 ms)
+[ RUN      ] TestStaticCRMMap.TestSingleElementMap
+2017-04-17 16:30:44: static_contained_range_map_unittest.cc:230: INFO: Serialized data size: 928 Bytes.
+[       OK ] TestStaticCRMMap.TestSingleElementMap (0 ms)
+[ RUN      ] TestStaticCRMMap.RunTestData
+2017-04-17 16:30:44: static_contained_range_map_unittest.cc:230: INFO: Serialized data size: 928 Bytes.
+[       OK ] TestStaticCRMMap.RunTestData (0 ms)
+[----------] 3 tests from TestStaticCRMMap (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test case ran. (1 ms total)
+[  PASSED  ] 3 tests.
+PASS src/processor/static_contained_range_map_unittest (exit status: 0)

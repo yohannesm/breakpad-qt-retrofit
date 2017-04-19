@@ -1,0 +1,26 @@
+Running main() from gtest_main.cc
+[==========] Running 8 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 8 tests from DisassemblerX86Test
+[ RUN      ] DisassemblerX86Test.SimpleReturnInstruction
+[       OK ] DisassemblerX86Test.SimpleReturnInstruction (0 ms)
+[ RUN      ] DisassemblerX86Test.SimpleInvalidInstruction
+[       OK ] DisassemblerX86Test.SimpleInvalidInstruction (0 ms)
+[ RUN      ] DisassemblerX86Test.BadReadLeadsToBranch
+[       OK ] DisassemblerX86Test.BadReadLeadsToBranch (0 ms)
+[ RUN      ] DisassemblerX86Test.BadWriteLeadsToPushedArg
+[       OK ] DisassemblerX86Test.BadWriteLeadsToPushedArg (0 ms)
+[ RUN      ] DisassemblerX86Test.BadReadLeadsToBlockWrite
+[       OK ] DisassemblerX86Test.BadReadLeadsToBlockWrite (0 ms)
+[ RUN      ] DisassemblerX86Test.BadReadClobberThenWrite
+[       OK ] DisassemblerX86Test.BadReadClobberThenWrite (0 ms)
+[ RUN      ] DisassemblerX86Test.BadReadXCHGThenWrite
+[       OK ] DisassemblerX86Test.BadReadXCHGThenWrite (0 ms)
+[ RUN      ] DisassemblerX86Test.BadReadThenCMP
+[       OK ] DisassemblerX86Test.BadReadThenCMP (0 ms)
+[----------] 8 tests from DisassemblerX86Test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 8 tests.
+PASS src/processor/disassembler_x86_unittest (exit status: 0)

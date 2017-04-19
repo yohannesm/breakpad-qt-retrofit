@@ -1,0 +1,53 @@
+Testing microdump_stackwalk for arch arm
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:47: source_line_resolver_base.cc:236: INFO: Loading symbols for module breakpad_unittests from memory buffer
+2017-04-17 16:30:47: simple_symbol_supplier.cc:196: INFO: No symbol file at ./src/processor/testdata/symbols/microdump/libc.so/167F187B09A27F7444EF989603AAFD3D0/libc.so.sym
+2017-04-17 16:30:47: stackwalker.cc:98: INFO: Couldn't load symbols for: libc.so|167F187B09A27F7444EF989603AAFD3D0
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7058
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xaab4b900
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xaab4b898
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xaab4b890
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xaab4b8f8
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xf70826ff
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x2
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7b7f
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7bb9
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7bde
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7c0a
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7c1d
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7dd9
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7e16
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7e2f
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7e44
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7e6e
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7e87
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7e9e
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7ec8
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7ee3
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7efd
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7f0a
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7f24
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7f43
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0xffea7fc2
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x10
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x7b0d6
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x6
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x1000
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x11
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x64
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x0
+Testing microdump_stackwalk for arch arm64
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:47: source_line_resolver_base.cc:236: INFO: Loading symbols for module breakpad_unittests from memory buffer
+2017-04-17 16:30:47: simple_symbol_supplier.cc:196: INFO: No symbol file at ./src/processor/testdata/symbols/microdump/libc.so/479D5438753E27F019F2C9980DDBF4F30/libc.so.sym
+2017-04-17 16:30:47: stackwalker.cc:98: INFO: Couldn't load symbols for: libc.so|479D5438753E27F019F2C9980DDBF4F30
+2017-04-17 16:30:47: basic_code_modules.cc:110: INFO: No module at 0x0
+PASS src/processor/microdump_stackwalk_test (exit status: 0)

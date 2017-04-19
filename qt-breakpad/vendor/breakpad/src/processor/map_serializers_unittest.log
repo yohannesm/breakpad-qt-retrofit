@@ -1,0 +1,42 @@
+[==========] Running 12 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 3 tests from TestStdMapSerializer
+[ RUN      ] TestStdMapSerializer.EmptyMapTestCase
+[       OK ] TestStdMapSerializer.EmptyMapTestCase (0 ms)
+[ RUN      ] TestStdMapSerializer.MapWithTwoElementsTestCase
+[       OK ] TestStdMapSerializer.MapWithTwoElementsTestCase (0 ms)
+[ RUN      ] TestStdMapSerializer.MapWithFiveElementsTestCase
+[       OK ] TestStdMapSerializer.MapWithFiveElementsTestCase (0 ms)
+[----------] 3 tests from TestStdMapSerializer (0 ms total)
+
+[----------] 3 tests from TestAddressMapSerializer
+[ RUN      ] TestAddressMapSerializer.EmptyMapTestCase
+[       OK ] TestAddressMapSerializer.EmptyMapTestCase (0 ms)
+[ RUN      ] TestAddressMapSerializer.MapWithTwoElementsTestCase
+[       OK ] TestAddressMapSerializer.MapWithTwoElementsTestCase (0 ms)
+[ RUN      ] TestAddressMapSerializer.MapWithFourElementsTestCase
+[       OK ] TestAddressMapSerializer.MapWithFourElementsTestCase (0 ms)
+[----------] 3 tests from TestAddressMapSerializer (0 ms total)
+
+[----------] 3 tests from TestRangeMapSerializer
+[ RUN      ] TestRangeMapSerializer.EmptyMapTestCase
+[       OK ] TestRangeMapSerializer.EmptyMapTestCase (0 ms)
+[ RUN      ] TestRangeMapSerializer.MapWithOneRangeTestCase
+[       OK ] TestRangeMapSerializer.MapWithOneRangeTestCase (0 ms)
+[ RUN      ] TestRangeMapSerializer.MapWithThreeRangesTestCase
+[       OK ] TestRangeMapSerializer.MapWithThreeRangesTestCase (0 ms)
+[----------] 3 tests from TestRangeMapSerializer (0 ms total)
+
+[----------] 3 tests from TestContainedRangeMapSerializer
+[ RUN      ] TestContainedRangeMapSerializer.EmptyMapTestCase
+[       OK ] TestContainedRangeMapSerializer.EmptyMapTestCase (0 ms)
+[ RUN      ] TestContainedRangeMapSerializer.MapWithOneRangeTestCase
+[       OK ] TestContainedRangeMapSerializer.MapWithOneRangeTestCase (0 ms)
+[ RUN      ] TestContainedRangeMapSerializer.MapWithTwoLevelsTestCase
+[       OK ] TestContainedRangeMapSerializer.MapWithTwoLevelsTestCase (0 ms)
+[----------] 3 tests from TestContainedRangeMapSerializer (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 12 tests from 4 test cases ran. (0 ms total)
+[  PASSED  ] 12 tests.
+PASS src/processor/map_serializers_unittest (exit status: 0)

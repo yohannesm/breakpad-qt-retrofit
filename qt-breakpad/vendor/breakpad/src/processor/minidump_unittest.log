@@ -1,0 +1,162 @@
+Running main() from gtest_main.cc
+[==========] Running 24 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 2 tests from MinidumpTest
+[ RUN      ] MinidumpTest.TestMinidumpFromFile
+2017-04-17 16:30:44: minidump.cc:4811: INFO: Minidump opened minidump ./src/processor/testdata/minidump2.dmp
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] MinidumpTest.TestMinidumpFromFile (0 ms)
+[ RUN      ] MinidumpTest.TestMinidumpFromStream
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] MinidumpTest.TestMinidumpFromStream (0 ms)
+[----------] 2 tests from MinidumpTest (0 ms total)
+
+[----------] 22 tests from Dump
+[ RUN      ] Dump.ReadBackEmpty
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.ReadBackEmpty (0 ms)
+[ RUN      ] Dump.ReadBackEmptyBigEndian
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.ReadBackEmptyBigEndian (0 ms)
+[ RUN      ] Dump.OneStream
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 3 not present
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 4 not present
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 5 not present
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 6 not present
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 1197932546 not present
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 7 not present
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 15 not present
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 1197932545 not present
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneStream (0 ms)
+[ RUN      ] Dump.OneMemory
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneMemory (0 ms)
+[ RUN      ] Dump.OneThread
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 7 not present
+2017-04-17 16:30:44: minidump.cc:1115: INFO: MinidumpContext could not be compared against MinidumpSystemInfo
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneThread (0 ms)
+[ RUN      ] Dump.ThreadMissingMemory
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:1485: ERROR: MinidumpThread has a memory region problem, 0x2326a0fa+0x0, RVA 0x0x20
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 7 not present
+2017-04-17 16:30:44: minidump.cc:1115: INFO: MinidumpContext could not be compared against MinidumpSystemInfo
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.ThreadMissingMemory (0 ms)
+[ RUN      ] Dump.ThreadMissingContext
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 7 not present
+2017-04-17 16:30:44: minidump.cc:1097: INFO: MinidumpContext unknown context type 0x0
+2017-04-17 16:30:44: minidump.cc:1532: ERROR: MinidumpThread cannot read context
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.ThreadMissingContext (0 ms)
+[ RUN      ] Dump.OneUnloadedModule
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneUnloadedModule (0 ms)
+[ RUN      ] Dump.OneModule
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneModule (0 ms)
+[ RUN      ] Dump.OneModuleCVELF
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneModuleCVELF (0 ms)
+[ RUN      ] Dump.CVELFShort
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.CVELFShort (0 ms)
+[ RUN      ] Dump.CVELFLong
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.CVELFLong (0 ms)
+[ RUN      ] Dump.OneSystemInfo
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneSystemInfo (0 ms)
+[ RUN      ] Dump.BigDump
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.BigDump (0 ms)
+[ RUN      ] Dump.OneMemoryInfo
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneMemoryInfo (0 ms)
+[ RUN      ] Dump.OneExceptionX86
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 7 not present
+2017-04-17 16:30:44: minidump.cc:1115: INFO: MinidumpContext could not be compared against MinidumpSystemInfo
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneExceptionX86 (0 ms)
+[ RUN      ] Dump.OneExceptionX86XState
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 7 not present
+2017-04-17 16:30:44: minidump.cc:1115: INFO: MinidumpContext could not be compared against MinidumpSystemInfo
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneExceptionX86XState (0 ms)
+[ RUN      ] Dump.OneExceptionX86NoCPUFlags
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneExceptionX86NoCPUFlags (0 ms)
+[ RUN      ] Dump.OneExceptionX86NoCPUFlagsNoSystemInfo
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 7 not present
+2017-04-17 16:30:44: minidump.cc:1097: INFO: MinidumpContext unknown context type 0x0
+2017-04-17 16:30:44: minidump.cc:3162: INFO: MinidumpException cannot read context
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneExceptionX86NoCPUFlagsNoSystemInfo (0 ms)
+[ RUN      ] Dump.OneExceptionARM
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 7 not present
+2017-04-17 16:30:44: minidump.cc:1115: INFO: MinidumpContext could not be compared against MinidumpSystemInfo
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneExceptionARM (0 ms)
+[ RUN      ] Dump.OneExceptionARMOldFlags
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 7 not present
+2017-04-17 16:30:44: minidump.cc:1115: INFO: MinidumpContext could not be compared against MinidumpSystemInfo
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneExceptionARMOldFlags (0 ms)
+[ RUN      ] Dump.OneExceptionMIPS
+2017-04-17 16:30:44: minidump.cc:4795: INFO: Minidump reopening minidump 
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 7 not present
+2017-04-17 16:30:44: minidump.cc:1115: INFO: MinidumpContext could not be compared against MinidumpSystemInfo
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] Dump.OneExceptionMIPS (0 ms)
+[----------] 22 tests from Dump (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 24 tests from 2 test cases ran. (1 ms total)
+[  PASSED  ] 24 tests.
+PASS src/processor/minidump_unittest (exit status: 0)

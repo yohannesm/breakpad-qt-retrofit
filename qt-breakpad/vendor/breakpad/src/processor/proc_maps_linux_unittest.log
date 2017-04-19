@@ -1,0 +1,50 @@
+Running main() from gtest_main.cc
+[==========] Running 12 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 12 tests from ProcMapsTest
+[ RUN      ] ProcMapsTest.Empty
+[       OK ] ProcMapsTest.Empty (0 ms)
+[ RUN      ] ProcMapsTest.NoSpaces
+[       OK ] ProcMapsTest.NoSpaces (0 ms)
+[ RUN      ] ProcMapsTest.Spaces
+[       OK ] ProcMapsTest.Spaces (0 ms)
+[ RUN      ] ProcMapsTest.NoNewline
+2017-04-17 16:30:44: proc_maps_linux.cc:48: ERROR: Input doesn't end in newline
+[       OK ] ProcMapsTest.NoNewline (0 ms)
+[ RUN      ] ProcMapsTest.NoPath
+[       OK ] ProcMapsTest.NoPath (0 ms)
+[ RUN      ] ProcMapsTest.Heap
+[       OK ] ProcMapsTest.Heap (0 ms)
+[ RUN      ] ProcMapsTest.Multiple
+[       OK ] ProcMapsTest.Multiple (0 ms)
+[ RUN      ] ProcMapsTest.Permissions
+[       OK ] ProcMapsTest.Permissions (0 ms)
+[ RUN      ] ProcMapsTest.MissingFields
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: 00400000
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: 00400000-0040b000
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: 00400000-0040b000 r-xp
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: 00400000-0040b000 r-xp 00000000
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: 00400000-0040b000 r-xp 00000000 fc:00
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: 00400000-0040b000 r-xp fc:00 794418 /bin/cat
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: 00400000-0040b000 r-xp 00000000 fc:00 /bin/cat
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: 00400000 r-xp 00000000 fc:00 794418 /bin/cat
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: -0040b000 r-xp 00000000 fc:00 794418 /bin/cat
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: 00400000-0040b000 r-xp 00000000 794418 /bin/cat
+[       OK ] ProcMapsTest.MissingFields (0 ms)
+[ RUN      ] ProcMapsTest.InvalidInput
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: thisisal-0040b000 rwxp 00000000 fc:00 794418 /bin/cat
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: 0040000d-linvalid rwxp 00000000 fc:00 794418 /bin/cat
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: 00400000-0040b000 rwxp tforproc fc:00 794418 /bin/cat
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: 00400000-0040b000 rwxp 00000000 ma:ps 794418 /bin/cat
+2017-04-17 16:30:44: proc_maps_linux.cc:70: ERROR: sscanf failed for line: 00400000-0040b000 rwxp 00000000 fc:00 parse! /bin/cat
+[       OK ] ProcMapsTest.InvalidInput (0 ms)
+[ RUN      ] ProcMapsTest.ParseProcMapsEmptyString
+[       OK ] ProcMapsTest.ParseProcMapsEmptyString (0 ms)
+[ RUN      ] ProcMapsTest.ParseProcMapsWeirdCorrectInput
+[       OK ] ProcMapsTest.ParseProcMapsWeirdCorrectInput (0 ms)
+[----------] 12 tests from ProcMapsTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 12 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 12 tests.
+PASS src/processor/proc_maps_linux_unittest (exit status: 0)

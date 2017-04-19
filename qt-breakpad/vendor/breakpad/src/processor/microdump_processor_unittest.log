@@ -1,0 +1,779 @@
+[==========] Running 10 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 10 tests from MicrodumpProcessorTest
+[ RUN      ] MicrodumpProcessorTest.TestProcess_Empty
+2017-04-17 16:30:44: microdump_processor.cc:64: ERROR: Microdump is empty.
+[       OK ] MicrodumpProcessorTest.TestProcess_Empty (0 ms)
+[ RUN      ] MicrodumpProcessorTest.TestProcess_Invalid
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: stackwalker.cc:265: ERROR: Unknown CPU type 0x0, can't choose a stackwalker implementation
+2017-04-17 16:30:44: microdump_processor.cc:88: ERROR: No stackwalker found for microdump.
+[       OK ] MicrodumpProcessorTest.TestProcess_Invalid (0 ms)
+[ RUN      ] MicrodumpProcessorTest.TestProcess_MissingSymbols
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: simple_symbol_supplier.cc:196: INFO: No symbol file at /breakpad_unittests/D6D1FEC9A15DE7F38A236898871A2E770/breakpad_unittests.sym
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: breakpad_unittests|D6D1FEC9A15DE7F38A236898871A2E770
+2017-04-17 16:30:44: simple_symbol_supplier.cc:196: INFO: No symbol file at /libc.so/479D5438753E27F019F2C9980DDBF4F30/libc.so.sym
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: libc.so|479D5438753E27F019F2C9980DDBF4F30
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f8035b64c
+[       OK ] MicrodumpProcessorTest.TestProcess_MissingSymbols (4 ms)
+[ RUN      ] MicrodumpProcessorTest.TestProcess_UnsupportedArch
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: stackwalker.cc:265: ERROR: Unknown CPU type 0x0, can't choose a stackwalker implementation
+2017-04-17 16:30:44: microdump_processor.cc:88: ERROR: No stackwalker found for microdump.
+[       OK ] MicrodumpProcessorTest.TestProcess_UnsupportedArch (0 ms)
+[ RUN      ] MicrodumpProcessorTest.TestProcessArm
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module breakpad_unittests from memory buffer
+2017-04-17 16:30:44: simple_symbol_supplier.cc:196: INFO: No symbol file at ./src/processor/testdata/symbols/microdump/libc.so/167F187B09A27F7444EF989603AAFD3D0/libc.so.sym
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: libc.so|167F187B09A27F7444EF989603AAFD3D0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7058
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xaab4b900
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xaab4b898
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xaab4b890
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xaab4b8f8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf70826ff
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x2
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7b7f
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7bb9
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7bde
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7c0a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7c1d
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7dd9
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7e16
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7e2f
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7e44
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7e6e
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7e87
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7e9e
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7ec8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7ee3
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7efd
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7f0a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7f24
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7f43
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffea7fc2
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x10
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7b0d6
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x6
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1000
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x11
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x64
+[       OK ] MicrodumpProcessorTest.TestProcessArm (36 ms)
+[ RUN      ] MicrodumpProcessorTest.TestProcessArm64
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module breakpad_unittests from memory buffer
+2017-04-17 16:30:44: simple_symbol_supplier.cc:196: INFO: No symbol file at ./src/processor/testdata/symbols/microdump/libc.so/479D5438753E27F019F2C9980DDBF4F30/libc.so.sym
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: libc.so|479D5438753E27F019F2C9980DDBF4F30
+[       OK ] MicrodumpProcessorTest.TestProcessArm64 (38 ms)
+[ RUN      ] MicrodumpProcessorTest.TestProcessX86
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libavutil.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libavcodec.so was shrunk down by 0x29000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libstagefright_omx.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libdrmframework.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libexif.so was shrunk down by 0x3000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libstagefright.so was shrunk down by 0x6000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libmedia_jni.so was shrunk down by 0x2000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libjavacrypto.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libLLVM.so was shrunk down by 0xa000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libcommon_time_client.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libhwui.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libsoundtrigger.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libradio.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libpdfium.so was shrunk down by 0x6000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libmedia.so was shrunk down by 0x16000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libicui18n.so was shrunk down by 0x7000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libicuuc.so was shrunk down by 0x7000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libEGL.so was shrunk down by 0x8000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libskia.so was shrunk down by 0xe000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libcamera_client.so was shrunk down by 0x2000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libinput.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libgui.so was shrunk down by 0x8000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libandroid_runtime.so was shrunk down by 0xe000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libbinder.so was shrunk down by 0x2000 bytes.
+2017-04-17 16:30:44: simple_symbol_supplier.cc:196: INFO: No symbol file at ./src/processor/testdata/symbols/microdump/libc.so/12FA662923A8693EE010FC5D185739100/libc.so.sym
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: libc.so|12FA662923A8693EE010FC5D185739100
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x6
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x2029
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x2029
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x6
+2017-04-17 16:30:44: simple_symbol_supplier.cc:196: INFO: No symbol file at ./src/processor/testdata/symbols/microdump/app_process32_xposed/50D89C8096239F07B843A4C5C35923170/app_process32_xposed.sym
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: app_process32_xposed|50D89C8096239F07B843A4C5C35923170
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x2
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffb44c0c
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf77c2c3f
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x6
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffb44c4c
+2017-04-17 16:30:44: simple_symbol_supplier.cc:196: INFO: No symbol file at ./src/processor/testdata/symbols/microdump/libchrome.so/7AEFEEE07C050930D779F813A65B7FE60/libchrome.so.sym
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: libchrome.so|7AEFEEE07C050930D779F813A65B7FE60
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffb44d44
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x734c0e6f
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x33182000
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x65a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x73502943
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x711a6478
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x33182000
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x70a68bf8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf4031300
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x70d5b800
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x33178cc0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x731f0df4
+2017-04-17 16:30:44: simple_symbol_supplier.cc:196: INFO: No symbol file at ./src/processor/testdata/symbols/microdump/libart.so/6F79159F51864D6FC2A36A966C3560800/libart.so.sym
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: libart.so|6F79159F51864D6FC2A36A966C3560800
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x70fed960
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x70d5b800
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x71197b58
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xa
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7506c038
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x29
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x33181000
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7102c3b8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x640069
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x65a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x65a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x65a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x65a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x70d5b800
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x65a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf4019ae0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x20005d
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x20005d
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf4019af0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x20005d
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x49
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x73502034
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7503cbe8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x33181000
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffb44f88
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffb44ee8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1f
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf400d004
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf4002050
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf400d004
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x80
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x80
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf4040140
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf400d004
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc204a33f
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x8000000b
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffb44fc8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffb44fb8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc204a300
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1f
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffb45120
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc99c6a87
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc1fe0e80
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc1fe0ee5
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc1fe0eff
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x81
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc1fe0e80
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc1fe0ee5
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x10
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1002
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x6
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffb45120
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc99c6a88
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x20
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1c
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xe9
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x200025
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x100029
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffb4527c
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf4019ae0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffb45270
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf4019adf
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x26
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xcf453aa0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc0b85c20
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xcf453aa0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x9
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc0b85c20
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xca7b84b1
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffb45318
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc99c0b47
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc0b85c00
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xca7b84b1
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffb453c8
+[       OK ] MicrodumpProcessorTest.TestProcessX86 (6 ms)
+[ RUN      ] MicrodumpProcessorTest.TestProcessMultiple
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libandroid.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libqservice.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libllvm-glnext.so was shrunk down by 0x1e000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libGLESv2_adreno.so was shrunk down by 0x6000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libjavacrypto.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libexif.so was shrunk down by 0x3000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libmedia_jni.so was shrunk down by 0x2000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libsensor1.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libLGParserOSAL.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libmediaplayerservice.so was shrunk down by 0x6000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libavenhancements.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libLLVM.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libcommon_time_client.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module liblgdrm_client.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libstagefright_omx.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libdrmframework.so was shrunk down by 0x2000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libstagefright.so was shrunk down by 0x8000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libhwui.so was shrunk down by 0x2000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libsoundtrigger.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libpdfium.so was shrunk down by 0x6000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libmedia.so was shrunk down by 0x19000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libicui18n.so was shrunk down by 0x7000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libicuuc.so was shrunk down by 0x7000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libEGL.so was shrunk down by 0x8000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libskia.so was shrunk down by 0x11000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libcamera_client.so was shrunk down by 0x4000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libinputflinger.so was shrunk down by 0x1000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libinput.so was shrunk down by 0x2000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libgui.so was shrunk down by 0x9000 bytes.
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libandroid_runtime.so was shrunk down by 0xf000 bytes.
+2017-04-17 16:30:44: simple_symbol_supplier.cc:196: INFO: No symbol file at ./src/processor/testdata/symbols/microdump/libllvm-glnext.so/9F67EE99805EFC8AA9D25EC32DE705C80/libllvm-glnext.so.sym
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: libllvm-glnext.so|9F67EE99805EFC8AA9D25EC32DE705C80
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffff0000
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xe4827f00
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc3f44640
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc20480d0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1694
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x850
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1590
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x2
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc20481d0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc2048d40
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7b4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x850
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+[       OK ] MicrodumpProcessorTest.TestProcessMultiple (4 ms)
+[ RUN      ] MicrodumpProcessorTest.TestProcessMips
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module crash_example from memory buffer
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fcc4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fcc4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fcc4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fcc4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77c89020
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fcc4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fcc4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffffff
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77c89020
+2017-04-17 16:30:44: simple_symbol_supplier.cc:196: INFO: No symbol file at ./src/processor/testdata/symbols/microdump/linker/8C70B1BF8FBAC1170EB21E350AB2E7580/linker.sym
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x25000
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fde4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x3
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffffff
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x14
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffffff
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x3
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffffff
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffffff
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x3
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fd34
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fd34
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fd40
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fd40
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xaf8cad13
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fdec
+2017-04-17 16:30:44: simple_symbol_supplier.cc:196: INFO: No symbol file at ./src/processor/testdata/symbols/microdump/libc.so/D1E0DFA8390BAADD25564F8B0E139FF90/libc.so.sym
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: libc.so|D1E0DFA8390BAADD25564F8B0E139FF90
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77bd4350
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x8b
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77c0c760
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffffff
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77986ae8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7796e000
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77c0401c
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fbf0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77c09000
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77c89020
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77c80d48
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77c80d50
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77c80d58
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77c80d60
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77c80d68
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7796e000
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x77986ae8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930b7e
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930b8e
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930ba0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930bb3
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930bd6
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930be1
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930bfc
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930c07
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930c1e
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930c37
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930c4b
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930c64
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930ce3
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930cfd
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930eb9
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930ece
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930ee1
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930f0d
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930f37
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930f47
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930f51
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930f8e
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930fad
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930fc2
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x10
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x6
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1000
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x11
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x64
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x3
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x20
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x5
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xb
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x9
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xb
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xd
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xe
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x17
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x19
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f92fed8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1f
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7f930fec
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xaf8cad13
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x8bf6bd8a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xe0a7803a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x4e021723
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: stackwalker_mips.cc:329: ERROR:  ScanForReturnAddress failed 
+[       OK ] MicrodumpProcessorTest.TestProcessMips (5 ms)
+[ RUN      ] MicrodumpProcessorTest.TestProcessMips64
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:84: INFO: The range for module libc++.so was shrunk down by 0x4000 bytes.
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module crash_example from memory buffer
+2017-04-17 16:30:44: simple_symbol_supplier.cc:196: INFO: No symbol file at ./src/processor/testdata/symbols/microdump/libc.so/3A55BF92DE1E4C51F6F6140479CFA5080/libc.so.sym
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: libc.so|3A55BF92DE1E4C51F6F6140479CFA5080
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xfff137d508
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffffffffffffff
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x182606
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffecb82000
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xfff1426030
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xfff141dcd8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xfff141dce8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xfff141dcf8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffec72c448
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xfff1426030
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x182606
+2017-04-17 16:30:44: simple_symbol_supplier.cc:196: INFO: No symbol file at ./src/processor/testdata/symbols/microdump/linker64/519DF595D6558C61E962693B460A31C80/linker64.sym
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfc0a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfc1a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfc2c
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfc3f
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfc53
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfc5e
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfc68
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfc7d
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfc88
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfc9d
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfcb0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfcc7
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfce2
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfe8a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfea4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfebb
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfed3
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfef4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccff0d
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccff4a
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccffc9
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x10
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x3
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x6
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1000
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x11
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x64
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x3
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x38
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x5
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xb
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x7
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x9
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xb
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xc
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xd
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xe
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x17
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x19
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccfa40
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x1f
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xffffccffe8
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x6fae2b727e8089ef
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x21d22b71566b239b
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: stackwalker_mips.cc:395: ERROR:  ScanForReturnAddress failed 
+[       OK ] MicrodumpProcessorTest.TestProcessMips64 (2 ms)
+[----------] 10 tests from MicrodumpProcessorTest (95 ms total)
+
+[----------] Global test environment tear-down
+[==========] 10 tests from 1 test case ran. (95 ms total)
+[  PASSED  ] 10 tests.
+PASS src/processor/microdump_processor_unittest (exit status: 0)

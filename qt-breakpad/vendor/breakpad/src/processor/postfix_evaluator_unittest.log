@@ -1,0 +1,21 @@
+2017-04-17 16:30:44: postfix_evaluator-inl.h:248: ERROR: Incomplete execution: 99
+2017-04-17 16:30:44: postfix_evaluator-inl.h:106: ERROR: Could not PopValues to get two values for binary operation +: $T0 2 = +
+2017-04-17 16:30:44: postfix_evaluator-inl.h:106: ERROR: Could not PopValues to get two values for binary operation +: 2 + =
+2017-04-17 16:30:44: postfix_evaluator-inl.h:106: ERROR: Could not PopValues to get two values for binary operation +: 2 +
+2017-04-17 16:30:44: postfix_evaluator-inl.h:106: ERROR: Could not PopValues to get two values for binary operation +: +
+2017-04-17 16:30:44: postfix_evaluator-inl.h:153: ERROR: Could not PopValue to get value to derefence: ^
+2017-04-17 16:30:44: postfix_evaluator-inl.h:170: INFO: Could not PopValue to get value to assign: =
+2017-04-17 16:30:44: postfix_evaluator-inl.h:180: ERROR: PopValueOrIdentifier returned a value, but an identifier is needed to assign 0x2: 2 =
+2017-04-17 16:30:44: postfix_evaluator-inl.h:180: ERROR: PopValueOrIdentifier returned a value, but an identifier is needed to assign 0x4: 2 2 + =
+2017-04-17 16:30:44: postfix_evaluator-inl.h:180: ERROR: PopValueOrIdentifier returned a value, but an identifier is needed to assign 0x2: 2 2 =
+2017-04-17 16:30:44: postfix_evaluator-inl.h:186: ERROR: Can't assign 0x2 to k: k 2 =
+2017-04-17 16:30:44: postfix_evaluator-inl.h:248: ERROR: Incomplete execution: 2
+2017-04-17 16:30:44: postfix_evaluator-inl.h:248: ERROR: Incomplete execution: 2 2 +
+2017-04-17 16:30:44: postfix_evaluator-inl.h:248: ERROR: Incomplete execution: $rAdd
+2017-04-17 16:30:44: postfix_evaluator-inl.h:248: ERROR: Incomplete execution: 0 $T1 0 0 + =
+2017-04-17 16:30:44: postfix_evaluator-inl.h:334: INFO: Identifier $T2 not in dictionary
+2017-04-17 16:30:44: postfix_evaluator-inl.h:106: ERROR: Could not PopValues to get two values for binary operation +: $T2 $T2 2 + =
+2017-04-17 16:30:44: postfix_evaluator-inl.h:263: ERROR: Expression yielded bad number of results: '18929794 34015074'
+2017-04-17 16:30:44: postfix_evaluator-inl.h:263: ERROR: Expression yielded bad number of results: '$ebp $ebp 4 - ='
+2017-04-17 16:30:44: postfix_evaluator-inl.h:186: ERROR: Can't assign 0x2a to .cfa: .cfa 42 = 10
+PASS src/processor/postfix_evaluator_unittest (exit status: 0)

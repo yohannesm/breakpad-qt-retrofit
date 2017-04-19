@@ -1,0 +1,32 @@
+Running main() from gtest_main.cc
+[==========] Running 11 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 11 tests from MinidumpMemoryRangeTest
+[ RUN      ] MinidumpMemoryRangeTest.DefaultConstructor
+[       OK ] MinidumpMemoryRangeTest.DefaultConstructor (0 ms)
+[ RUN      ] MinidumpMemoryRangeTest.ConstructorWithDataAndLength
+[       OK ] MinidumpMemoryRangeTest.ConstructorWithDataAndLength (0 ms)
+[ RUN      ] MinidumpMemoryRangeTest.Reset
+[       OK ] MinidumpMemoryRangeTest.Reset (0 ms)
+[ RUN      ] MinidumpMemoryRangeTest.Set
+[       OK ] MinidumpMemoryRangeTest.Set (0 ms)
+[ RUN      ] MinidumpMemoryRangeTest.SubrangeOfEmptyMemoryRange
+[       OK ] MinidumpMemoryRangeTest.SubrangeOfEmptyMemoryRange (0 ms)
+[ RUN      ] MinidumpMemoryRangeTest.SubrangeAndGetData
+[       OK ] MinidumpMemoryRangeTest.SubrangeAndGetData (0 ms)
+[ RUN      ] MinidumpMemoryRangeTest.SubrangeWithMDLocationDescriptor
+[       OK ] MinidumpMemoryRangeTest.SubrangeWithMDLocationDescriptor (0 ms)
+[ RUN      ] MinidumpMemoryRangeTest.GetDataWithTemplateType
+[       OK ] MinidumpMemoryRangeTest.GetDataWithTemplateType (0 ms)
+[ RUN      ] MinidumpMemoryRangeTest.GetArrayElement
+[       OK ] MinidumpMemoryRangeTest.GetArrayElement (0 ms)
+[ RUN      ] MinidumpMemoryRangeTest.GetArrayElmentWithTemplateType
+[       OK ] MinidumpMemoryRangeTest.GetArrayElmentWithTemplateType (0 ms)
+[ RUN      ] MinidumpMemoryRangeTest.GetAsciiMDString
+[       OK ] MinidumpMemoryRangeTest.GetAsciiMDString (0 ms)
+[----------] 11 tests from MinidumpMemoryRangeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 11 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 11 tests.
+PASS src/tools/linux/md2core/minidump_2_core_unittest (exit status: 0)

@@ -1,0 +1,312 @@
+[==========] Running 7 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 7 tests from MinidumpProcessorTest
+[ RUN      ] MinidumpProcessorTest.TestUnloadedModules
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetMiscInfo()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetBreakpadInfo()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetException()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetAssertion()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetModuleList()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+2017-04-17 16:30:44: minidump_processor.cc:152: INFO: Found 0 memory regions.
+2017-04-17 16:30:44: minidump_processor.cc:162: INFO: Minidump mock minidump has CPU info, OS info, no Breakpad info, no exception, no module list, thread list, no dump thread, no requesting thread, and no process create time
+2017-04-17 16:30:44: minidump_processor.cc:201: INFO: Looking at thread mock minidump:0/1 id 0x1
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: |
+2017-04-17 16:30:44: minidump_processor.cc:326: INFO: Processed mock minidump
+[       OK ] MinidumpProcessorTest.TestUnloadedModules (0 ms)
+[ RUN      ] MinidumpProcessorTest.TestCorruptMinidumps
+2017-04-17 16:30:44: minidump_processor.cc:332: INFO: Processing minidump in file nonexistent minidump
+2017-04-17 16:30:44: minidump.cc:4806: ERROR: Minidump could not open minidump nonexistent minidump, error 2: No such file or directory
+2017-04-17 16:30:44: minidump.cc:4900: ERROR: Minidump cannot open minidump
+2017-04-17 16:30:44: minidump_processor.cc:336: ERROR: Minidump nonexistent minidump could not be read
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+2017-04-17 16:30:44: minidump_processor.cc:89: ERROR: Minidump mock minidump has no header
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetMiscInfo()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetBreakpadInfo()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetException()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetAssertion()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetModuleList()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetUnloadedModuleList()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetMemoryList()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+2017-04-17 16:30:44: minidump_processor.cc:158: ERROR: Minidump mock minidump has no thread list
+[       OK ] MinidumpProcessorTest.TestCorruptMinidumps (0 ms)
+[ RUN      ] MinidumpProcessorTest.TestSymbolSupplierLookupCounts
+2017-04-17 16:30:44: minidump_processor.cc:332: INFO: Processing minidump in file ./src/processor/testdata/minidump2.dmp
+2017-04-17 16:30:44: minidump.cc:4811: INFO: Minidump opened minidump ./src/processor/testdata/minidump2.dmp
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 1197932546 not present
+2017-04-17 16:30:44: minidump.cc:2182: INFO: MinidumpModule could not determine version for c:\test_app.exe
+2017-04-17 16:30:44: minidump.cc:2182: INFO: MinidumpModule could not determine version for c:\test_app.exe
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 14 not present
+2017-04-17 16:30:44: minidump_processor.cc:152: INFO: Found 3 memory regions.
+2017-04-17 16:30:44: minidump_processor.cc:162: INFO: Minidump ./src/processor/testdata/minidump2.dmp has CPU info, OS info, Breakpad info, exception, module list, thread list, dump thread, requesting thread, and process create time
+2017-04-17 16:30:44: minidump_processor.cc:201: INFO: Looking at thread ./src/processor/testdata/minidump2.dmp:0/2 id 0xbf4
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: c:\test_app.pdb|5A9832E5287241C1838ED98914E9B7FF1
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: kernel32.pdb|BCE8785C57B44245A669896B6A19B9542
+2017-04-17 16:30:44: minidump_processor.cc:201: INFO: Looking at thread ./src/processor/testdata/minidump2.dmp:1/2 id 0x11c0
+2017-04-17 16:30:44: minidump_processor.cc:326: INFO: Processed ./src/processor/testdata/minidump2.dmp
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+2017-04-17 16:30:44: minidump_processor.cc:332: INFO: Processing minidump in file ./src/processor/testdata/minidump2.dmp
+2017-04-17 16:30:44: minidump.cc:4811: INFO: Minidump opened minidump ./src/processor/testdata/minidump2.dmp
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 1197932546 not present
+2017-04-17 16:30:44: minidump.cc:2182: INFO: MinidumpModule could not determine version for c:\test_app.exe
+2017-04-17 16:30:44: minidump.cc:2182: INFO: MinidumpModule could not determine version for c:\test_app.exe
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 14 not present
+2017-04-17 16:30:44: minidump_processor.cc:152: INFO: Found 3 memory regions.
+2017-04-17 16:30:44: minidump_processor.cc:162: INFO: Minidump ./src/processor/testdata/minidump2.dmp has CPU info, OS info, Breakpad info, exception, module list, thread list, dump thread, requesting thread, and process create time
+2017-04-17 16:30:44: minidump_processor.cc:201: INFO: Looking at thread ./src/processor/testdata/minidump2.dmp:0/2 id 0xbf4
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: c:\test_app.pdb|5A9832E5287241C1838ED98914E9B7FF1
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: kernel32.pdb|BCE8785C57B44245A669896B6A19B9542
+2017-04-17 16:30:44: minidump_processor.cc:201: INFO: Looking at thread ./src/processor/testdata/minidump2.dmp:1/2 id 0x11c0
+2017-04-17 16:30:44: minidump_processor.cc:326: INFO: Processed ./src/processor/testdata/minidump2.dmp
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] MinidumpProcessorTest.TestSymbolSupplierLookupCounts (1 ms)
+[ RUN      ] MinidumpProcessorTest.TestBasicProcessing
+2017-04-17 16:30:44: minidump_processor.cc:332: INFO: Processing minidump in file ./src/processor/testdata/minidump2.dmp
+2017-04-17 16:30:44: minidump.cc:4811: INFO: Minidump opened minidump ./src/processor/testdata/minidump2.dmp
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 1197932546 not present
+2017-04-17 16:30:44: minidump.cc:2182: INFO: MinidumpModule could not determine version for c:\test_app.exe
+2017-04-17 16:30:44: minidump.cc:2182: INFO: MinidumpModule could not determine version for c:\test_app.exe
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 14 not present
+2017-04-17 16:30:44: minidump_processor.cc:152: INFO: Found 3 memory regions.
+2017-04-17 16:30:44: minidump_processor.cc:162: INFO: Minidump ./src/processor/testdata/minidump2.dmp has CPU info, OS info, Breakpad info, exception, module list, thread list, dump thread, requesting thread, and process create time
+2017-04-17 16:30:44: minidump_processor.cc:201: INFO: Looking at thread ./src/processor/testdata/minidump2.dmp:0/2 id 0xbf4
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module c:\test_app.exe from memory buffer
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x12ff70
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x12ffc0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf7a0ba7
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x12fff0
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: kernel32.pdb|BCE8785C57B44245A669896B6A19B9542
+2017-04-17 16:30:44: minidump_processor.cc:201: INFO: Looking at thread ./src/processor/testdata/minidump2.dmp:1/2 id 0x11c0
+2017-04-17 16:30:44: minidump_processor.cc:326: INFO: Processed ./src/processor/testdata/minidump2.dmp
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: minidump_processor.cc:332: INFO: Processing minidump in file ./src/processor/testdata/minidump2.dmp
+2017-04-17 16:30:44: minidump.cc:4811: INFO: Minidump opened minidump ./src/processor/testdata/minidump2.dmp
+2017-04-17 16:30:44: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 1197932546 not present
+2017-04-17 16:30:44: minidump.cc:2182: INFO: MinidumpModule could not determine version for c:\test_app.exe
+2017-04-17 16:30:44: minidump.cc:2182: INFO: MinidumpModule could not determine version for c:\test_app.exe
+2017-04-17 16:30:44: minidump.cc:5414: INFO: GetStream: type 14 not present
+2017-04-17 16:30:44: minidump_processor.cc:152: INFO: Found 3 memory regions.
+2017-04-17 16:30:44: minidump_processor.cc:162: INFO: Minidump ./src/processor/testdata/minidump2.dmp has CPU info, OS info, Breakpad info, exception, module list, thread list, dump thread, requesting thread, and process create time
+2017-04-17 16:30:44: minidump_processor.cc:201: INFO: Looking at thread ./src/processor/testdata/minidump2.dmp:0/2 id 0xbf4
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x12ff70
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x12ffc0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0xf7a0ba7
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-17 16:30:44: basic_code_modules.cc:110: INFO: No module at 0x12fff0
+2017-04-17 16:30:44: stackwalker.cc:143: INFO: Stack walk is interrupted.
+2017-04-17 16:30:44: minidump_processor.cc:279: INFO: Stackwalker interrupt (missing symbols?) at ./src/processor/testdata/minidump2.dmp:0/2 id 0xbf4
+2017-04-17 16:30:44: minidump_processor.cc:201: INFO: Looking at thread ./src/processor/testdata/minidump2.dmp:1/2 id 0x11c0
+2017-04-17 16:30:44: minidump_processor.cc:295: INFO: Processing interrupted for ./src/processor/testdata/minidump2.dmp
+2017-04-17 16:30:44: minidump.cc:4783: INFO: Minidump closing minidump
+[       OK ] MinidumpProcessorTest.TestBasicProcessing (11 ms)
+[ RUN      ] MinidumpProcessorTest.TestThreadMissingMemory
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetMiscInfo()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetBreakpadInfo()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetException()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetAssertion()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetModuleList()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetUnloadedModuleList()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+2017-04-17 16:30:44: minidump_processor.cc:152: INFO: Found 0 memory regions.
+2017-04-17 16:30:44: minidump_processor.cc:162: INFO: Minidump mock minidump has CPU info, OS info, no Breakpad info, no exception, no module list, thread list, no dump thread, no requesting thread, and no process create time
+2017-04-17 16:30:44: minidump_processor.cc:201: INFO: Looking at thread mock minidump:0/1 id 0x1
+2017-04-17 16:30:44: minidump_processor.cc:255: ERROR: No memory region for mock minidump:0/1 id 0x1
+2017-04-17 16:30:44: stackwalker_x86.cc:631: ERROR: Can't get caller frame without memory or stack
+2017-04-17 16:30:44: minidump_processor.cc:326: INFO: Processed mock minidump
+[       OK ] MinidumpProcessorTest.TestThreadMissingMemory (1 ms)
+[ RUN      ] MinidumpProcessorTest.GetProcessCreateTime
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetSystemInfo()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetSystemInfo()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetBreakpadInfo()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetException()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetAssertion()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetModuleList()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetUnloadedModuleList()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetMemoryList()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+2017-04-17 16:30:44: minidump_processor.cc:162: INFO: Minidump mock minidump has no CPU info, no OS info, no Breakpad info, no exception, no module list, thread list, no dump thread, no requesting thread, and process create time
+2017-04-17 16:30:44: minidump_processor.cc:326: INFO: Processed mock minidump
+[       OK ] MinidumpProcessorTest.GetProcessCreateTime (0 ms)
+[ RUN      ] MinidumpProcessorTest.TestThreadMissingContext
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetMiscInfo()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetBreakpadInfo()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetException()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetAssertion()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetModuleList()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning default value.
+    Function call: GetUnloadedModuleList()
+          Returns: NULL
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+2017-04-17 16:30:44: minidump_processor.cc:152: INFO: Found 0 memory regions.
+2017-04-17 16:30:44: minidump_processor.cc:162: INFO: Minidump mock minidump has CPU info, OS info, no Breakpad info, no exception, no module list, thread list, no dump thread, no requesting thread, and no process create time
+2017-04-17 16:30:44: minidump_processor.cc:201: INFO: Looking at thread mock minidump:0/1 id 0x1
+2017-04-17 16:30:44: stackwalker.cc:200: ERROR: Can't choose a stackwalker implementation without context
+2017-04-17 16:30:44: minidump_processor.cc:287: ERROR: No stackwalker for mock minidump:0/1 id 0x1
+2017-04-17 16:30:44: minidump_processor.cc:326: INFO: Processed mock minidump
+[       OK ] MinidumpProcessorTest.TestThreadMissingContext (0 ms)
+[----------] 7 tests from MinidumpProcessorTest (13 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test case ran. (13 ms total)
+[  PASSED  ] 7 tests.
+PASS src/processor/minidump_processor_unittest (exit status: 0)

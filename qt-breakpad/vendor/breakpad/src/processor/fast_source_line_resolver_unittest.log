@@ -1,0 +1,70 @@
+[==========] Running 4 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 4 tests from TestFastSourceLineResolver
+[ RUN      ] TestFastSourceLineResolver.TestLoadAndResolve
+2017-04-17 16:30:44: source_line_resolver_base.cc:163: INFO: Loading symbols for module module1 from ./src/processor/testdata/module1.out
+2017-04-17 16:30:44: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module1.out
+2017-04-17 16:30:44: source_line_resolver_base.cc:171: INFO: Read symbol file ./src/processor/testdata/module1.out succeeded
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-17 16:30:44: module_serializer.cc:136: INFO: Converting symbol module1
+2017-04-17 16:30:44: module_serializer.cc:148: INFO: Serialized Symbol Size 1411
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:163: INFO: Loading symbols for module module2 from ./src/processor/testdata/module2.out
+2017-04-17 16:30:44: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module2.out
+2017-04-17 16:30:44: source_line_resolver_base.cc:171: INFO: Read symbol file ./src/processor/testdata/module2.out succeeded
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module2 from memory buffer
+2017-04-17 16:30:44: module_serializer.cc:136: INFO: Converting symbol module2
+2017-04-17 16:30:44: module_serializer.cc:148: INFO: Serialized Symbol Size 1107
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module2 from memory buffer
+[       OK ] TestFastSourceLineResolver.TestLoadAndResolve (0 ms)
+[ RUN      ] TestFastSourceLineResolver.TestInvalidLoads
+2017-04-17 16:30:44: source_line_resolver_base.cc:163: INFO: Loading symbols for module module3 from ./src/processor/testdata/module3_bad.out
+2017-04-17 16:30:44: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module3_bad.out
+2017-04-17 16:30:44: source_line_resolver_base.cc:171: INFO: Read symbol file ./src/processor/testdata/module3_bad.out succeeded
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module3 from memory buffer
+2017-04-17 16:30:44: basic_source_line_resolver.cc:79: ERROR: Line 3: ParseFunction failed
+2017-04-17 16:30:44: module_serializer.cc:136: INFO: Converting symbol module3
+2017-04-17 16:30:44: module_serializer.cc:148: INFO: Serialized Symbol Size 159
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module3 from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:163: INFO: Loading symbols for module module4 from ./src/processor/testdata/module4_bad.out
+2017-04-17 16:30:44: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module4_bad.out
+2017-04-17 16:30:44: source_line_resolver_base.cc:171: INFO: Read symbol file ./src/processor/testdata/module4_bad.out succeeded
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module4 from memory buffer
+2017-04-17 16:30:44: basic_source_line_resolver.cc:79: ERROR: Line 4: Found source line data without a function
+2017-04-17 16:30:44: basic_source_line_resolver.cc:79: ERROR: Line 5: Found source line data without a function
+2017-04-17 16:30:44: module_serializer.cc:136: INFO: Converting symbol module4
+2017-04-17 16:30:44: module_serializer.cc:148: INFO: Serialized Symbol Size 180
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module4 from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:163: INFO: Loading symbols for module module5 from ./src/processor/testdata/invalid-filename
+2017-04-17 16:30:44: source_line_resolver_base.cc:101: ERROR: Could not open ./src/processor/testdata/invalid-filename, error 2: No such file or directory
+[       OK ] TestFastSourceLineResolver.TestInvalidLoads (0 ms)
+[ RUN      ] TestFastSourceLineResolver.TestUnload
+2017-04-17 16:30:44: source_line_resolver_base.cc:163: INFO: Loading symbols for module module1 from ./src/processor/testdata/module1.out
+2017-04-17 16:30:44: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module1.out
+2017-04-17 16:30:44: source_line_resolver_base.cc:171: INFO: Read symbol file ./src/processor/testdata/module1.out succeeded
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-17 16:30:44: module_serializer.cc:136: INFO: Converting symbol module1
+2017-04-17 16:30:44: module_serializer.cc:148: INFO: Serialized Symbol Size 1411
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:163: INFO: Loading symbols for module module1 from ./src/processor/testdata/module1.out
+2017-04-17 16:30:44: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module1.out
+2017-04-17 16:30:44: source_line_resolver_base.cc:171: INFO: Read symbol file ./src/processor/testdata/module1.out succeeded
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-17 16:30:44: module_serializer.cc:136: INFO: Converting symbol module1
+2017-04-17 16:30:44: module_serializer.cc:148: INFO: Serialized Symbol Size 1411
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] TestFastSourceLineResolver.TestUnload (1 ms)
+[ RUN      ] TestFastSourceLineResolver.CompareModule
+2017-04-17 16:30:44: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module0.out
+2017-04-17 16:30:44: module_comparer.cc:72: INFO: Serialized size = 1207368 Bytes
+2017-04-17 16:30:44: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module1.out
+2017-04-17 16:30:44: module_comparer.cc:72: INFO: Serialized size = 1411 Bytes
+2017-04-17 16:30:44: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module2.out
+2017-04-17 16:30:44: module_comparer.cc:72: INFO: Serialized size = 1107 Bytes
+[       OK ] TestFastSourceLineResolver.CompareModule (14 ms)
+[----------] 4 tests from TestFastSourceLineResolver (15 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test case ran. (15 ms total)
+[  PASSED  ] 4 tests.
+PASS src/processor/fast_source_line_resolver_unittest (exit status: 0)

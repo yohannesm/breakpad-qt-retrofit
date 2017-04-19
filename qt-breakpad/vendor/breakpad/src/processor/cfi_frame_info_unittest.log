@@ -1,0 +1,101 @@
+Running main() from gtest_main.cc
+[==========] Running 37 tests from 5 test cases.
+[----------] Global test environment set-up.
+[----------] 5 tests from Simple
+[ RUN      ] Simple.NoCFA
+[       OK ] Simple.NoCFA (0 ms)
+[ RUN      ] Simple.NoRA
+[       OK ] Simple.NoRA (0 ms)
+[ RUN      ] Simple.SetCFAAndRARule
+[       OK ] Simple.SetCFAAndRARule (0 ms)
+[ RUN      ] Simple.SetManyRules
+[       OK ] Simple.SetManyRules (0 ms)
+[ RUN      ] Simple.RulesOverride
+[       OK ] Simple.RulesOverride (0 ms)
+[----------] 5 tests from Simple (0 ms total)
+
+[----------] 10 tests from Scope
+[ RUN      ] Scope.CFALacksCFA
+2017-04-17 16:30:44: postfix_evaluator-inl.h:334: INFO: Identifier .cfa not in dictionary
+[       OK ] Scope.CFALacksCFA (0 ms)
+[ RUN      ] Scope.CFALacksRA
+2017-04-17 16:30:44: postfix_evaluator-inl.h:334: INFO: Identifier .ra not in dictionary
+[       OK ] Scope.CFALacksRA (0 ms)
+[ RUN      ] Scope.CFASeesCurrentRegs
+[       OK ] Scope.CFASeesCurrentRegs (0 ms)
+[ RUN      ] Scope.RASeesCFA
+[       OK ] Scope.RASeesCFA (0 ms)
+[ RUN      ] Scope.RALacksRA
+2017-04-17 16:30:44: postfix_evaluator-inl.h:334: INFO: Identifier .ra not in dictionary
+[       OK ] Scope.RALacksRA (0 ms)
+[ RUN      ] Scope.RASeesCurrentRegs
+[       OK ] Scope.RASeesCurrentRegs (0 ms)
+[ RUN      ] Scope.RegistersSeeCFA
+[       OK ] Scope.RegistersSeeCFA (0 ms)
+[ RUN      ] Scope.RegsLackRA
+2017-04-17 16:30:44: postfix_evaluator-inl.h:334: INFO: Identifier .ra not in dictionary
+[       OK ] Scope.RegsLackRA (0 ms)
+[ RUN      ] Scope.RegsSeeRegs
+[       OK ] Scope.RegsSeeRegs (0 ms)
+[ RUN      ] Scope.SeparateTempsRA
+2017-04-17 16:30:44: postfix_evaluator-inl.h:334: INFO: Identifier $temp1 not in dictionary
+[       OK ] Scope.SeparateTempsRA (0 ms)
+[----------] 10 tests from Scope (0 ms total)
+
+[----------] 19 tests from Parser
+[ RUN      ] Parser.Empty
+[       OK ] Parser.Empty (0 ms)
+[ RUN      ] Parser.LoneColon
+[       OK ] Parser.LoneColon (0 ms)
+[ RUN      ] Parser.CFANoExpr
+[       OK ] Parser.CFANoExpr (0 ms)
+[ RUN      ] Parser.CFANoColonNoExpr
+[       OK ] Parser.CFANoColonNoExpr (0 ms)
+[ RUN      ] Parser.RANoExpr
+[       OK ] Parser.RANoExpr (0 ms)
+[ RUN      ] Parser.RANoColonNoExpr
+[       OK ] Parser.RANoColonNoExpr (0 ms)
+[ RUN      ] Parser.RegNoExpr
+[       OK ] Parser.RegNoExpr (0 ms)
+[ RUN      ] Parser.NoName
+[       OK ] Parser.NoName (0 ms)
+[ RUN      ] Parser.NoNameTwo
+[       OK ] Parser.NoNameTwo (0 ms)
+[ RUN      ] Parser.StartsWithExpr
+[       OK ] Parser.StartsWithExpr (0 ms)
+[ RUN      ] Parser.CFA
+[       OK ] Parser.CFA (0 ms)
+[ RUN      ] Parser.RA
+[       OK ] Parser.RA (0 ms)
+[ RUN      ] Parser.Reg
+[       OK ] Parser.Reg (0 ms)
+[ RUN      ] Parser.CFARARegs
+[       OK ] Parser.CFARARegs (0 ms)
+[ RUN      ] Parser.Whitespace
+[       OK ] Parser.Whitespace (0 ms)
+[ RUN      ] Parser.WhitespaceLoneColon
+[       OK ] Parser.WhitespaceLoneColon (0 ms)
+[ RUN      ] Parser.EmptyName
+[       OK ] Parser.EmptyName (0 ms)
+[ RUN      ] Parser.RuleLoneColon
+[       OK ] Parser.RuleLoneColon (0 ms)
+[ RUN      ] Parser.RegNoExprRule
+[       OK ] Parser.RegNoExprRule (0 ms)
+[----------] 19 tests from Parser (0 ms total)
+
+[----------] 2 tests from ParseHandler
+[ RUN      ] ParseHandler.CFARARule
+[       OK ] ParseHandler.CFARARule (0 ms)
+[ RUN      ] ParseHandler.RegisterRules
+[       OK ] ParseHandler.RegisterRules (0 ms)
+[----------] 2 tests from ParseHandler (0 ms total)
+
+[----------] 1 test from SimpleWalker
+[ RUN      ] SimpleWalker.Walk
+[       OK ] SimpleWalker.Walk (0 ms)
+[----------] 1 test from SimpleWalker (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 37 tests from 5 test cases ran. (0 ms total)
+[  PASSED  ] 37 tests.
+PASS src/processor/cfi_frame_info_unittest (exit status: 0)

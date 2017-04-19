@@ -1,0 +1,28 @@
+[==========] Running 5 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 5 tests from TestStaticRangeMap
+[ RUN      ] TestStaticRangeMap.TestCase0
+2017-04-17 16:30:44: range_map-inl.h:78: INFO: StoreRangeInternal failed, 0x7ffffff6+0xb, 0x80000000, delta: 0x0
+2017-04-17 16:30:44: range_map-inl.h:78: INFO: StoreRangeInternal failed, 0x1b+0xffffffff, 0x19, delta: 0x0
+2017-04-17 16:30:44: static_range_map-inl.h:110: ERROR: Index out of range: 14/14
+[       OK ] TestStaticRangeMap.TestCase0 (0 ms)
+[ RUN      ] TestStaticRangeMap.TestCase1
+2017-04-17 16:30:44: static_range_map-inl.h:110: ERROR: Index out of range: 3/3
+[       OK ] TestStaticRangeMap.TestCase1 (0 ms)
+[ RUN      ] TestStaticRangeMap.TestCase2
+2017-04-17 16:30:44: static_range_map-inl.h:110: ERROR: Index out of range: 1/1
+[       OK ] TestStaticRangeMap.TestCase2 (0 ms)
+[ RUN      ] TestStaticRangeMap.TestCase3
+2017-04-17 16:30:44: static_range_map-inl.h:110: ERROR: Index out of range: 2/2
+[       OK ] TestStaticRangeMap.TestCase3 (0 ms)
+[ RUN      ] TestStaticRangeMap.RunTestCase0Again
+2017-04-17 16:30:44: range_map-inl.h:78: INFO: StoreRangeInternal failed, 0x7ffffff6+0xb, 0x80000000, delta: 0x0
+2017-04-17 16:30:44: range_map-inl.h:78: INFO: StoreRangeInternal failed, 0x1b+0xffffffff, 0x19, delta: 0x0
+2017-04-17 16:30:44: static_range_map-inl.h:110: ERROR: Index out of range: 14/14
+[       OK ] TestStaticRangeMap.RunTestCase0Again (0 ms)
+[----------] 5 tests from TestStaticRangeMap (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 5 tests.
+PASS src/processor/static_range_map_unittest (exit status: 0)

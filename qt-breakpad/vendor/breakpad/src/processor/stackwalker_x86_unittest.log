@@ -1,0 +1,118 @@
+Running main() from gtest_main.cc
+[==========] Running 27 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from SanityCheck
+[ RUN      ] SanityCheck.NoResolver
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+[       OK ] SanityCheck.NoResolver (0 ms)
+[----------] 1 test from SanityCheck (0 ms total)
+
+[----------] 2 tests from GetContextFrame
+[ RUN      ] GetContextFrame.Simple
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+[       OK ] GetContextFrame.Simple (0 ms)
+[ RUN      ] GetContextFrame.NoStackMemory
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+2017-04-17 16:30:44: stackwalker_x86.cc:631: ERROR: Can't get caller frame without memory or stack
+[       OK ] GetContextFrame.NoStackMemory (0 ms)
+[----------] 2 tests from GetContextFrame (0 ms total)
+
+[----------] 17 tests from GetCallerFrame
+[ RUN      ] GetCallerFrame.Traditional
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+[       OK ] GetCallerFrame.Traditional (0 ms)
+[ RUN      ] GetCallerFrame.TraditionalScan
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+[       OK ] GetCallerFrame.TraditionalScan (0 ms)
+[ RUN      ] GetCallerFrame.TraditionalScanLongWay
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+[       OK ] GetCallerFrame.TraditionalScanLongWay (0 ms)
+[ RUN      ] GetCallerFrame.ScanningNotAllowed
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+[       OK ] GetCallerFrame.ScanningNotAllowed (0 ms)
+[ RUN      ] GetCallerFrame.WindowsFrameData
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] GetCallerFrame.WindowsFrameData (0 ms)
+[ RUN      ] GetCallerFrame.WindowsFrameDataAligned
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Couldn't load symbols for: module2|module2
+[       OK ] GetCallerFrame.WindowsFrameDataAligned (0 ms)
+[ RUN      ] GetCallerFrame.WindowsFrameDataParameterSize
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module2 from memory buffer
+[       OK ] GetCallerFrame.WindowsFrameDataParameterSize (0 ms)
+[ RUN      ] GetCallerFrame.WindowsFrameDataScan
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-17 16:30:44: postfix_evaluator-inl.h:248: ERROR: Incomplete execution: bad program string
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module2 from memory buffer
+[       OK ] GetCallerFrame.WindowsFrameDataScan (0 ms)
+[ RUN      ] GetCallerFrame.WindowsFrameDataBadEIPScan
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module2 from memory buffer
+[       OK ] GetCallerFrame.WindowsFrameDataBadEIPScan (0 ms)
+[ RUN      ] GetCallerFrame.WindowsFPOUnchangedEBP
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] GetCallerFrame.WindowsFPOUnchangedEBP (0 ms)
+[ RUN      ] GetCallerFrame.WindowsFPOUsedEBP
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] GetCallerFrame.WindowsFPOUsedEBP (0 ms)
+[ RUN      ] GetCallerFrame.WindowsFPOReferencesEBX
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module ntdll from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module kernel32 from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module chrome_child from memory buffer
+[       OK ] GetCallerFrame.WindowsFPOReferencesEBX (0 ms)
+[ RUN      ] GetCallerFrame.WindowsFPOSystemCall
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module3 from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module4 from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module5 from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module6 from memory buffer
+[       OK ] GetCallerFrame.WindowsFPOSystemCall (0 ms)
+[ RUN      ] GetCallerFrame.ReturnAddressIsNotInKnownModule
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module msvcrt.dll from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module kernel32.dll from memory buffer
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module chrome.dll from memory buffer
+[       OK ] GetCallerFrame.ReturnAddressIsNotInKnownModule (1 ms)
+[ RUN      ] GetCallerFrame.HandleAlignmentInProgramString
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module chrome.dll from memory buffer
+[       OK ] GetCallerFrame.HandleAlignmentInProgramString (0 ms)
+[ RUN      ] GetCallerFrame.IPAddressIsNotInKnownModule
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module remoting_core.dll from memory buffer
+[       OK ] GetCallerFrame.IPAddressIsNotInKnownModule (0 ms)
+[ RUN      ] GetCallerFrame.IPAddressIsNotInKnownModule_CorruptSymbols
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module remoting_core.dll from memory buffer
+2017-04-17 16:30:44: basic_source_line_resolver.cc:81: ERROR: Null terminator is not expected in the middle of the symbol data
+2017-04-17 16:30:44: basic_source_line_resolver.cc:79: ERROR: Line 5: ParseLine failed
+2017-04-17 16:30:44: basic_source_line_resolver.cc:79: ERROR: Line 6: ParseFunction failed
+2017-04-17 16:30:44: basic_source_line_resolver.cc:79: ERROR: Line 7: Found source line data without a function
+2017-04-17 16:30:44: stackwalker.cc:98: INFO: Detected corrupt symbols for: remoting_core.dll|remoting_core.dll
+[       OK ] GetCallerFrame.IPAddressIsNotInKnownModule_CorruptSymbols (0 ms)
+[----------] 17 tests from GetCallerFrame (2 ms total)
+
+[----------] 7 tests from CFI
+[ RUN      ] CFI.At4000
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4000 (0 ms)
+[ RUN      ] CFI.At4001
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4001 (0 ms)
+[ RUN      ] CFI.At4002
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4002 (0 ms)
+[ RUN      ] CFI.At4003
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4003 (0 ms)
+[ RUN      ] CFI.At4004
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4004 (0 ms)
+[ RUN      ] CFI.At4005
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4005 (0 ms)
+[ RUN      ] CFI.At4006
+2017-04-17 16:30:44: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4006 (0 ms)
+[----------] 7 tests from CFI (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 27 tests from 4 test cases ran. (2 ms total)
+[  PASSED  ] 27 tests.
+PASS src/processor/stackwalker_x86_unittest (exit status: 0)

@@ -1,0 +1,10 @@
+2017-04-17 16:30:44: range_map-inl.h:78: INFO: StoreRangeInternal failed, 0x7ffffff6+0xb, 0x80000000, delta: 0x0
+2017-04-17 16:30:44: range_map-inl.h:78: INFO: StoreRangeInternal failed, 0x1b+0xffffffff, 0x19, delta: 0x0
+2017-04-17 16:30:44: range_map-inl.h:235: ERROR: Index out of range: 14/14
+2017-04-17 16:30:44: range_map-inl.h:235: ERROR: Index out of range: 3/3
+2017-04-17 16:30:44: range_map-inl.h:235: ERROR: Index out of range: 1/1
+2017-04-17 16:30:44: range_map-inl.h:235: ERROR: Index out of range: 2/2
+2017-04-17 16:30:44: range_map-inl.h:78: INFO: StoreRangeInternal failed, 0x7ffffff6+0xb, 0x80000000, delta: 0x0
+2017-04-17 16:30:44: range_map-inl.h:78: INFO: StoreRangeInternal failed, 0x1b+0xffffffff, 0x19, delta: 0x0
+2017-04-17 16:30:44: range_map-inl.h:235: ERROR: Index out of range: 14/14
+PASS src/processor/range_map_unittest (exit status: 0)
