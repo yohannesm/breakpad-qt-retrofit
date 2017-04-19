@@ -1,0 +1,76 @@
+Running main() from gtest_main.cc
+[==========] Running 17 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from SanityCheck
+[ RUN      ] SanityCheck.NoResolver
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+[       OK ] SanityCheck.NoResolver (0 ms)
+[----------] 1 test from SanityCheck (0 ms total)
+
+[----------] 2 tests from GetContextFrame
+[ RUN      ] GetContextFrame.Simple
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+[       OK ] GetContextFrame.Simple (0 ms)
+[ RUN      ] GetContextFrame.NoStackMemory
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+2017-04-14 15:04:39: stackwalker_amd64.cc:292: ERROR: Can't get caller frame without memory or stack
+[       OK ] GetContextFrame.NoStackMemory (0 ms)
+[----------] 2 tests from GetContextFrame (0 ms total)
+
+[----------] 7 tests from GetCallerFrame
+[ RUN      ] GetCallerFrame.ScanWithoutSymbols
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module2|module2
+[       OK ] GetCallerFrame.ScanWithoutSymbols (0 ms)
+[ RUN      ] GetCallerFrame.ScanWithFunctionSymbols
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module2 from memory buffer
+[       OK ] GetCallerFrame.ScanWithFunctionSymbols (0 ms)
+[ RUN      ] GetCallerFrame.GetCallerByFramePointerRecovery
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module user32.dll from memory buffer
+[       OK ] GetCallerFrame.GetCallerByFramePointerRecovery (0 ms)
+[ RUN      ] GetCallerFrame.FramePointerNotAligned
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module2|module2
+[       OK ] GetCallerFrame.FramePointerNotAligned (0 ms)
+[ RUN      ] GetCallerFrame.NonCanonicalInstructionPointerFromFramePointer
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module2|module2
+[       OK ] GetCallerFrame.NonCanonicalInstructionPointerFromFramePointer (0 ms)
+[ RUN      ] GetCallerFrame.ScanningNotAllowed
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+[       OK ] GetCallerFrame.ScanningNotAllowed (0 ms)
+[ RUN      ] GetCallerFrame.CallerPushedRBP
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module2 from memory buffer
+[       OK ] GetCallerFrame.CallerPushedRBP (0 ms)
+[----------] 7 tests from GetCallerFrame (0 ms total)
+
+[----------] 7 tests from CFI
+[ RUN      ] CFI.At4000
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4000 (0 ms)
+[ RUN      ] CFI.At4001
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4001 (0 ms)
+[ RUN      ] CFI.At4002
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4002 (0 ms)
+[ RUN      ] CFI.At4003
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4003 (0 ms)
+[ RUN      ] CFI.At4004
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4004 (1 ms)
+[ RUN      ] CFI.At4005
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4005 (0 ms)
+[ RUN      ] CFI.At4006
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] CFI.At4006 (0 ms)
+[----------] 7 tests from CFI (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 17 tests from 4 test cases ran. (1 ms total)
+[  PASSED  ] 17 tests.
+PASS src/processor/stackwalker_amd64_unittest (exit status: 0)

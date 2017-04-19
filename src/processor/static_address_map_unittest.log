@@ -1,0 +1,17 @@
+[==========] Running 4 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 4 tests from TestStaticAddressMap
+[ RUN      ] TestStaticAddressMap.TestEmptyMap
+[       OK ] TestStaticAddressMap.TestEmptyMap (5 ms)
+[ RUN      ] TestStaticAddressMap.TestOneElementMap
+[       OK ] TestStaticAddressMap.TestOneElementMap (3 ms)
+[ RUN      ] TestStaticAddressMap.TestSixElementsMap
+[       OK ] TestStaticAddressMap.TestSixElementsMap (5 ms)
+[ RUN      ] TestStaticAddressMap.Test1000RandomElementsMap
+[       OK ] TestStaticAddressMap.Test1000RandomElementsMap (12 ms)
+[----------] 4 tests from TestStaticAddressMap (25 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test case ran. (25 ms total)
+[  PASSED  ] 4 tests.
+PASS src/processor/static_address_map_unittest (exit status: 0)

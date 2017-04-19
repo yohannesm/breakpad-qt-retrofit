@@ -1,0 +1,63 @@
+[==========] Running 11 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 3 tests from TestBasicSourceLineResolver
+[ RUN      ] TestBasicSourceLineResolver.TestLoadAndResolve
+2017-04-14 15:04:39: source_line_resolver_base.cc:163: INFO: Loading symbols for module module1 from ./src/processor/testdata/module1.out
+2017-04-14 15:04:39: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module1.out
+2017-04-14 15:04:39: source_line_resolver_base.cc:171: INFO: Read symbol file ./src/processor/testdata/module1.out succeeded
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-14 15:04:39: source_line_resolver_base.cc:163: INFO: Loading symbols for module module2 from ./src/processor/testdata/module2.out
+2017-04-14 15:04:39: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module2.out
+2017-04-14 15:04:39: source_line_resolver_base.cc:171: INFO: Read symbol file ./src/processor/testdata/module2.out succeeded
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module2 from memory buffer
+[       OK ] TestBasicSourceLineResolver.TestLoadAndResolve (1 ms)
+[ RUN      ] TestBasicSourceLineResolver.TestInvalidLoads
+2017-04-14 15:04:39: source_line_resolver_base.cc:163: INFO: Loading symbols for module module3 from ./src/processor/testdata/module3_bad.out
+2017-04-14 15:04:39: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module3_bad.out
+2017-04-14 15:04:39: source_line_resolver_base.cc:171: INFO: Read symbol file ./src/processor/testdata/module3_bad.out succeeded
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module3 from memory buffer
+2017-04-14 15:04:39: basic_source_line_resolver.cc:79: ERROR: Line 3: ParseFunction failed
+2017-04-14 15:04:39: source_line_resolver_base.cc:163: INFO: Loading symbols for module module4 from ./src/processor/testdata/module4_bad.out
+2017-04-14 15:04:39: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module4_bad.out
+2017-04-14 15:04:39: source_line_resolver_base.cc:171: INFO: Read symbol file ./src/processor/testdata/module4_bad.out succeeded
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module4 from memory buffer
+2017-04-14 15:04:39: basic_source_line_resolver.cc:79: ERROR: Line 4: Found source line data without a function
+2017-04-14 15:04:39: basic_source_line_resolver.cc:79: ERROR: Line 5: Found source line data without a function
+2017-04-14 15:04:39: source_line_resolver_base.cc:163: INFO: Loading symbols for module module5 from ./src/processor/testdata/invalid-filename
+2017-04-14 15:04:39: source_line_resolver_base.cc:101: ERROR: Could not open ./src/processor/testdata/invalid-filename, error 2: No such file or directory
+[       OK ] TestBasicSourceLineResolver.TestInvalidLoads (0 ms)
+[ RUN      ] TestBasicSourceLineResolver.TestUnload
+2017-04-14 15:04:39: source_line_resolver_base.cc:163: INFO: Loading symbols for module module1 from ./src/processor/testdata/module1.out
+2017-04-14 15:04:39: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module1.out
+2017-04-14 15:04:39: source_line_resolver_base.cc:171: INFO: Read symbol file ./src/processor/testdata/module1.out succeeded
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-14 15:04:39: source_line_resolver_base.cc:163: INFO: Loading symbols for module module1 from ./src/processor/testdata/module1.out
+2017-04-14 15:04:39: source_line_resolver_base.cc:118: INFO: Opening ./src/processor/testdata/module1.out
+2017-04-14 15:04:39: source_line_resolver_base.cc:171: INFO: Read symbol file ./src/processor/testdata/module1.out succeeded
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+[       OK ] TestBasicSourceLineResolver.TestUnload (0 ms)
+[----------] 3 tests from TestBasicSourceLineResolver (1 ms total)
+
+[----------] 8 tests from SymbolParseHelper
+[ RUN      ] SymbolParseHelper.ParseFileValid
+[       OK ] SymbolParseHelper.ParseFileValid (0 ms)
+[ RUN      ] SymbolParseHelper.ParseFileInvalid
+[       OK ] SymbolParseHelper.ParseFileInvalid (0 ms)
+[ RUN      ] SymbolParseHelper.ParseFunctionValid
+[       OK ] SymbolParseHelper.ParseFunctionValid (0 ms)
+[ RUN      ] SymbolParseHelper.ParseFunctionInvalid
+[       OK ] SymbolParseHelper.ParseFunctionInvalid (0 ms)
+[ RUN      ] SymbolParseHelper.ParseLineValid
+[       OK ] SymbolParseHelper.ParseLineValid (0 ms)
+[ RUN      ] SymbolParseHelper.ParseLineInvalid
+[       OK ] SymbolParseHelper.ParseLineInvalid (0 ms)
+[ RUN      ] SymbolParseHelper.ParsePublicSymbolValid
+[       OK ] SymbolParseHelper.ParsePublicSymbolValid (0 ms)
+[ RUN      ] SymbolParseHelper.ParsePublicSymbolInvalid
+[       OK ] SymbolParseHelper.ParsePublicSymbolInvalid (0 ms)
+[----------] 8 tests from SymbolParseHelper (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 11 tests from 2 test cases ran. (1 ms total)
+[  PASSED  ] 11 tests.
+PASS src/processor/basic_source_line_resolver_unittest (exit status: 0)

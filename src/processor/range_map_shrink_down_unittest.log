@@ -1,0 +1,26 @@
+Running main() from gtest_main.cc
+[==========] Running 8 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 8 tests from RangeMap
+[ RUN      ] RangeMap.TestShinkDown_SameRange
+[       OK ] RangeMap.TestShinkDown_SameRange (0 ms)
+[ RUN      ] RangeMap.TestShinkDown_CompletelyContained
+[       OK ] RangeMap.TestShinkDown_CompletelyContained (0 ms)
+[ RUN      ] RangeMap.TestShinkDown_CompletelyContained_LargerAddedSecond
+[       OK ] RangeMap.TestShinkDown_CompletelyContained_LargerAddedSecond (0 ms)
+[ RUN      ] RangeMap.TestShinkDown_PartialOverlap_AtBeginning
+[       OK ] RangeMap.TestShinkDown_PartialOverlap_AtBeginning (0 ms)
+[ RUN      ] RangeMap.TestShinkDown_PartialOverlap_AtEnd
+[       OK ] RangeMap.TestShinkDown_PartialOverlap_AtEnd (0 ms)
+[ RUN      ] RangeMap.TestShinkDown_OverlapAtBothEnds
+[       OK ] RangeMap.TestShinkDown_OverlapAtBothEnds (0 ms)
+[ RUN      ] RangeMap.TestShinkDown_MultipleConflicts
+[       OK ] RangeMap.TestShinkDown_MultipleConflicts (0 ms)
+[ RUN      ] RangeMap.TestShinkDown_NoConflicts
+[       OK ] RangeMap.TestShinkDown_NoConflicts (0 ms)
+[----------] 8 tests from RangeMap (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 8 tests.
+PASS src/processor/range_map_shrink_down_unittest (exit status: 0)

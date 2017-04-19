@@ -1,0 +1,73 @@
+Running main() from gtest_main.cc
+[==========] Running 18 tests from 10 test cases.
+[----------] Global test environment set-up.
+[----------] 2 tests from ContextDeathTest
+[ RUN      ] ContextDeathTest.X86BadFlags
+[       OK ] ContextDeathTest.X86BadFlags (74 ms)
+[ RUN      ] ContextDeathTest.X86BadEndianness
+[       OK ] ContextDeathTest.X86BadEndianness (70 ms)
+[----------] 2 tests from ContextDeathTest (144 ms total)
+
+[----------] 2 tests from Section
+[ RUN      ] Section.Simple
+[       OK ] Section.Simple (0 ms)
+[ RUN      ] Section.CiteLocationIn
+[       OK ] Section.CiteLocationIn (0 ms)
+[----------] 2 tests from Section (0 ms total)
+
+[----------] 1 test from Stream
+[ RUN      ] Stream.CiteStreamIn
+[       OK ] Stream.CiteStreamIn (0 ms)
+[----------] 1 test from Stream (0 ms total)
+
+[----------] 2 tests from Memory
+[ RUN      ] Memory.CiteMemoryIn
+[       OK ] Memory.CiteMemoryIn (0 ms)
+[ RUN      ] Memory.Here
+[       OK ] Memory.Here (0 ms)
+[----------] 2 tests from Memory (0 ms total)
+
+[----------] 2 tests from Context
+[ RUN      ] Context.X86
+[       OK ] Context.X86 (0 ms)
+[ RUN      ] Context.ARM
+[       OK ] Context.ARM (0 ms)
+[----------] 2 tests from Context (0 ms total)
+
+[----------] 1 test from Thread
+[ RUN      ] Thread.Simple
+[       OK ] Thread.Simple (0 ms)
+[----------] 1 test from Thread (0 ms total)
+
+[----------] 1 test from Exception
+[ RUN      ] Exception.Simple
+[       OK ] Exception.Simple (0 ms)
+[----------] 1 test from Exception (0 ms total)
+
+[----------] 2 tests from String
+[ RUN      ] String.Simple
+[       OK ] String.Simple (0 ms)
+[ RUN      ] String.CiteStringIn
+[       OK ] String.CiteStringIn (0 ms)
+[----------] 2 tests from String (0 ms total)
+
+[----------] 2 tests from List
+[ RUN      ] List.Empty
+[       OK ] List.Empty (0 ms)
+[ RUN      ] List.Two
+[       OK ] List.Two (0 ms)
+[----------] 2 tests from List (0 ms total)
+
+[----------] 3 tests from Dump
+[ RUN      ] Dump.Header
+[       OK ] Dump.Header (0 ms)
+[ RUN      ] Dump.HeaderBigEndian
+[       OK ] Dump.HeaderBigEndian (0 ms)
+[ RUN      ] Dump.OneSection
+[       OK ] Dump.OneSection (0 ms)
+[----------] 3 tests from Dump (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 18 tests from 10 test cases ran. (144 ms total)
+[  PASSED  ] 18 tests.
+PASS src/processor/synth_minidump_unittest (exit status: 0)

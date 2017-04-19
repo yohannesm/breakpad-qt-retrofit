@@ -1,0 +1,23 @@
+2017-04-14 15:04:43: minidump.cc:4811: INFO: Minidump opened minidump ./src/processor/testdata/minidump2.dmp
+2017-04-14 15:04:43: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-14 15:04:43: minidump.cc:5414: INFO: GetStream: type 1197932546 not present
+2017-04-14 15:04:43: minidump.cc:2182: INFO: MinidumpModule could not determine version for c:\test_app.exe
+2017-04-14 15:04:43: minidump.cc:2182: INFO: MinidumpModule could not determine version for c:\test_app.exe
+2017-04-14 15:04:43: minidump.cc:5414: INFO: GetStream: type 14 not present
+2017-04-14 15:04:43: minidump_processor.cc:152: INFO: Found 3 memory regions.
+2017-04-14 15:04:43: minidump_processor.cc:162: INFO: Minidump ./src/processor/testdata/minidump2.dmp has CPU info, OS info, Breakpad info, exception, module list, thread list, dump thread, requesting thread, and process create time
+2017-04-14 15:04:43: minidump_processor.cc:201: INFO: Looking at thread ./src/processor/testdata/minidump2.dmp:0/2 id 0xbf4
+2017-04-14 15:04:43: source_line_resolver_base.cc:236: INFO: Loading symbols for module c:\test_app.exe from memory buffer
+2017-04-14 15:04:43: basic_code_modules.cc:110: INFO: No module at 0x12ff70
+2017-04-14 15:04:43: basic_code_modules.cc:110: INFO: No module at 0x12ffc0
+2017-04-14 15:04:43: basic_code_modules.cc:110: INFO: No module at 0xf7a0ba7
+2017-04-14 15:04:43: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-14 15:04:43: basic_code_modules.cc:110: INFO: No module at 0x12fff0
+2017-04-14 15:04:43: source_line_resolver_base.cc:236: INFO: Loading symbols for module C:\WINDOWS\system32\kernel32.dll from memory buffer
+2017-04-14 15:04:43: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-14 15:04:43: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-14 15:04:43: basic_code_modules.cc:110: INFO: No module at 0x0
+2017-04-14 15:04:43: minidump_processor.cc:201: INFO: Looking at thread ./src/processor/testdata/minidump2.dmp:1/2 id 0x11c0
+2017-04-14 15:04:43: minidump_processor.cc:326: INFO: Processed ./src/processor/testdata/minidump2.dmp
+2017-04-14 15:04:43: minidump.cc:4783: INFO: Minidump closing minidump
+PASS src/processor/minidump_stackwalk_machine_readable_test (exit status: 0)

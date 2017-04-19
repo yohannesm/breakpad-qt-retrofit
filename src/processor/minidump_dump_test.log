@@ -1,0 +1,15 @@
+2017-04-14 15:04:42: minidump.cc:4811: INFO: Minidump opened minidump ./src/processor/testdata/minidump2.dmp
+2017-04-14 15:04:42: minidump.cc:4931: INFO: Minidump not byte-swapping minidump
+2017-04-14 15:04:42: minidump.cc:2182: INFO: MinidumpModule could not determine version for c:\test_app.exe
+2017-04-14 15:04:42: minidump.cc:5414: INFO: GetStream: type 1197932546 not present
+2017-04-14 15:04:42: minidump_dump.cc:148: INFO: minidump.GetAssertion() failed
+2017-04-14 15:04:42: minidump.cc:5414: INFO: GetStream: type 16 not present
+2017-04-14 15:04:42: minidump_dump.cc:180: ERROR: minidump.GetMemoryInfoList() failed
+2017-04-14 15:04:42: minidump.cc:5369: INFO: SeekToStreamType: type 1197932550 not present
+2017-04-14 15:04:42: minidump.cc:5369: INFO: SeekToStreamType: type 1197932551 not present
+2017-04-14 15:04:42: minidump.cc:5369: INFO: SeekToStreamType: type 1197932549 not present
+2017-04-14 15:04:42: minidump.cc:5369: INFO: SeekToStreamType: type 1197932548 not present
+2017-04-14 15:04:42: minidump.cc:5369: INFO: SeekToStreamType: type 1197932547 not present
+2017-04-14 15:04:42: minidump.cc:5369: INFO: SeekToStreamType: type 1197932553 not present
+2017-04-14 15:04:42: minidump.cc:4783: INFO: Minidump closing minidump
+PASS src/processor/minidump_dump_test (exit status: 0)

@@ -1,0 +1,158 @@
+Running main() from gtest_main.cc
+[==========] Running 59 tests from 6 test cases.
+[----------] Global test environment set-up.
+[----------] 3 tests from FatReaderReporter
+[ RUN      ] FatReaderReporter.BadHeader
+filename: file is neither a fat binary file nor a Mach-O object file
+[       OK ] FatReaderReporter.BadHeader (0 ms)
+[ RUN      ] FatReaderReporter.MisplacedObjectFile
+filename: file too short for the object files it claims to contain
+[       OK ] FatReaderReporter.MisplacedObjectFile (0 ms)
+[ RUN      ] FatReaderReporter.TooShort
+filename: file too short for the data it claims to contain
+[       OK ] FatReaderReporter.TooShort (0 ms)
+[----------] 3 tests from FatReaderReporter (0 ms total)
+
+[----------] 11 tests from MachOReaderReporter
+[ RUN      ] MachOReaderReporter.BadHeader
+filename: file is not a Mach-O object file
+[       OK ] MachOReaderReporter.BadHeader (0 ms)
+[ RUN      ] MachOReaderReporter.CPUTypeMismatch
+filename: CPU type 7, subtype 3 does not match expected type 18, subtype 0
+[       OK ] MachOReaderReporter.CPUTypeMismatch (0 ms)
+[ RUN      ] MachOReaderReporter.HeaderTruncated
+filename: file does not contain a complete Mach-O header
+[       OK ] MachOReaderReporter.HeaderTruncated (0 ms)
+[ RUN      ] MachOReaderReporter.LoadCommandRegionTruncated
+filename: file too short to hold load command region given in Mach-O header
+[       OK ] MachOReaderReporter.LoadCommandRegionTruncated (0 ms)
+[ RUN      ] MachOReaderReporter.LoadCommandsOverrun
+filename: file's header claims there are 10 load commands, but load command #9, of type 11, extends beyond the end of the load command region
+filename: file's header claims there are 10 load commands, but load command #9 extends beyond the end of the load command region
+[       OK ] MachOReaderReporter.LoadCommandsOverrun (0 ms)
+[ RUN      ] MachOReaderReporter.LoadCommandTooShort
+filename: the contents of load command #11, of type 2, extend beyond the size given in the load command's header
+[       OK ] MachOReaderReporter.LoadCommandTooShort (0 ms)
+[ RUN      ] MachOReaderReporter.SectionsMissing
+filename: the load command for segment 'segment name' is too short to hold the section headers it claims to have
+[       OK ] MachOReaderReporter.SectionsMissing (0 ms)
+[ RUN      ] MachOReaderReporter.MisplacedSegmentData
+filename: the segment 'segment name' claims its contents lie beyond the end of the file
+[       OK ] MachOReaderReporter.MisplacedSegmentData (0 ms)
+[ RUN      ] MachOReaderReporter.MisplacedSectionData
+filename: the section 'section name' in segment 'segment name' claims its contents lie outside the segment's contents
+[       OK ] MachOReaderReporter.MisplacedSectionData (0 ms)
+[ RUN      ] MachOReaderReporter.MisplacedSymbolTable
+filename: the LC_SYMTAB load command claims that the symbol table's contents are located beyond the end of the file
+[       OK ] MachOReaderReporter.MisplacedSymbolTable (0 ms)
+[ RUN      ] MachOReaderReporter.UnsupportedCPUType
+filename: CPU type 11 is not supported
+[       OK ] MachOReaderReporter.UnsupportedCPUType (0 ms)
+[----------] 11 tests from MachOReaderReporter (0 ms total)
+
+[----------] 12 tests from FatReaderTest
+[ RUN      ] FatReaderTest.BadMagic
+[       OK ] FatReaderTest.BadMagic (0 ms)
+[ RUN      ] FatReaderTest.HeaderTooShort
+[       OK ] FatReaderTest.HeaderTooShort (0 ms)
+[ RUN      ] FatReaderTest.ObjectListTooShort
+[       OK ] FatReaderTest.ObjectListTooShort (0 ms)
+[ RUN      ] FatReaderTest.DataTooShort
+[       OK ] FatReaderTest.DataTooShort (0 ms)
+[ RUN      ] FatReaderTest.NoObjectFiles
+[       OK ] FatReaderTest.NoObjectFiles (0 ms)
+[ RUN      ] FatReaderTest.OneObjectFile
+[       OK ] FatReaderTest.OneObjectFile (0 ms)
+[ RUN      ] FatReaderTest.ThreeObjectFiles
+[       OK ] FatReaderTest.ThreeObjectFiles (0 ms)
+[ RUN      ] FatReaderTest.BigEndianMachO32
+[       OK ] FatReaderTest.BigEndianMachO32 (0 ms)
+[ RUN      ] FatReaderTest.BigEndianMachO64
+[       OK ] FatReaderTest.BigEndianMachO64 (0 ms)
+[ RUN      ] FatReaderTest.LittleEndianMachO32
+[       OK ] FatReaderTest.LittleEndianMachO32 (0 ms)
+[ RUN      ] FatReaderTest.LittleEndianMachO64
+[       OK ] FatReaderTest.LittleEndianMachO64 (0 ms)
+[ RUN      ] FatReaderTest.IncompleteMach
+[       OK ] FatReaderTest.IncompleteMach (0 ms)
+[----------] 12 tests from FatReaderTest (0 ms total)
+
+[----------] 9 tests from ReaderTest
+[ RUN      ] ReaderTest.BadMagic
+[       OK ] ReaderTest.BadMagic (0 ms)
+[ RUN      ] ReaderTest.MismatchedMagic
+[       OK ] ReaderTest.MismatchedMagic (0 ms)
+[ RUN      ] ReaderTest.ShortMagic
+[       OK ] ReaderTest.ShortMagic (0 ms)
+[ RUN      ] ReaderTest.ShortHeader
+[       OK ] ReaderTest.ShortHeader (0 ms)
+[ RUN      ] ReaderTest.MismatchedCPU
+[       OK ] ReaderTest.MismatchedCPU (1 ms)
+[ RUN      ] ReaderTest.LittleEndian32Bit
+[       OK ] ReaderTest.LittleEndian32Bit (0 ms)
+[ RUN      ] ReaderTest.LittleEndian64Bit
+[       OK ] ReaderTest.LittleEndian64Bit (0 ms)
+[ RUN      ] ReaderTest.BigEndian32Bit
+[       OK ] ReaderTest.BigEndian32Bit (0 ms)
+[ RUN      ] ReaderTest.BigEndian64Bit
+[       OK ] ReaderTest.BigEndian64Bit (0 ms)
+[----------] 9 tests from ReaderTest (1 ms total)
+
+[----------] 20 tests from LoadCommand
+[ RUN      ] LoadCommand.RegionTruncated
+[       OK ] LoadCommand.RegionTruncated (0 ms)
+[ RUN      ] LoadCommand.None
+[       OK ] LoadCommand.None (0 ms)
+[ RUN      ] LoadCommand.Unknown
+[       OK ] LoadCommand.Unknown (0 ms)
+[ RUN      ] LoadCommand.TypeIncomplete
+[       OK ] LoadCommand.TypeIncomplete (0 ms)
+[ RUN      ] LoadCommand.LengthIncomplete
+[       OK ] LoadCommand.LengthIncomplete (0 ms)
+[ RUN      ] LoadCommand.ContentIncomplete
+[       OK ] LoadCommand.ContentIncomplete (0 ms)
+[ RUN      ] LoadCommand.SegmentBE32
+[       OK ] LoadCommand.SegmentBE32 (0 ms)
+[ RUN      ] LoadCommand.SegmentLE32
+[       OK ] LoadCommand.SegmentLE32 (0 ms)
+[ RUN      ] LoadCommand.SegmentBE64
+[       OK ] LoadCommand.SegmentBE64 (0 ms)
+[ RUN      ] LoadCommand.SegmentLE64
+[       OK ] LoadCommand.SegmentLE64 (0 ms)
+[ RUN      ] LoadCommand.SegmentCommandTruncated
+[       OK ] LoadCommand.SegmentCommandTruncated (0 ms)
+[ RUN      ] LoadCommand.SegmentBadContentOffset
+[       OK ] LoadCommand.SegmentBadContentOffset (0 ms)
+[ RUN      ] LoadCommand.ThreeLoadCommands
+[       OK ] LoadCommand.ThreeLoadCommands (0 ms)
+[ RUN      ] LoadCommand.OneSegmentTwoSections
+[       OK ] LoadCommand.OneSegmentTwoSections (0 ms)
+[ RUN      ] LoadCommand.MisplacedSectionBefore
+[       OK ] LoadCommand.MisplacedSectionBefore (0 ms)
+[ RUN      ] LoadCommand.MisplacedSectionAfter
+[       OK ] LoadCommand.MisplacedSectionAfter (1 ms)
+[ RUN      ] LoadCommand.MisplacedSectionTooBig
+[       OK ] LoadCommand.MisplacedSectionTooBig (0 ms)
+[ RUN      ] LoadCommand.ZappedSegment
+[       OK ] LoadCommand.ZappedSegment (0 ms)
+[ RUN      ] LoadCommand.MapSegmentSections
+[       OK ] LoadCommand.MapSegmentSections (0 ms)
+[ RUN      ] LoadCommand.FindSegment
+[       OK ] LoadCommand.FindSegment (0 ms)
+[----------] 20 tests from LoadCommand (1 ms total)
+
+[----------] 4 tests from Symtab
+[ RUN      ] Symtab.Symtab32
+[       OK ] Symtab.Symtab32 (0 ms)
+[ RUN      ] Symtab.Symtab64
+[       OK ] Symtab.Symtab64 (0 ms)
+[ RUN      ] Symtab.SymtabMisplacedSymbols
+[       OK ] Symtab.SymtabMisplacedSymbols (0 ms)
+[ RUN      ] Symtab.SymtabMisplacedStrings
+[       OK ] Symtab.SymtabMisplacedStrings (0 ms)
+[----------] 4 tests from Symtab (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 59 tests from 6 test cases ran. (2 ms total)
+[  PASSED  ] 59 tests.
+PASS src/common/mac/macho_reader_unittest (exit status: 0)

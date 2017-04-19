@@ -1,0 +1,60 @@
+Running main() from gtest_main.cc
+[==========] Running 10 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from SanityCheck
+[ RUN      ] SanityCheck.NoResolver
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+2017-04-14 15:04:39: stackwalker_mips.cc:395: ERROR:  ScanForReturnAddress failed 
+[       OK ] SanityCheck.NoResolver (0 ms)
+[----------] 1 test from SanityCheck (1 ms total)
+
+[----------] 2 tests from GetContextFrame
+[ RUN      ] GetContextFrame.Simple
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+2017-04-14 15:04:39: stackwalker_mips.cc:395: ERROR:  ScanForReturnAddress failed 
+[       OK ] GetContextFrame.Simple (0 ms)
+[ RUN      ] GetContextFrame.NoStackMemory
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+2017-04-14 15:04:39: stackwalker_mips.cc:251: ERROR: Can't get caller frame without memory or stack
+[       OK ] GetContextFrame.NoStackMemory (0 ms)
+[----------] 2 tests from GetContextFrame (0 ms total)
+
+[----------] 4 tests from GetCallerFrame
+[ RUN      ] GetCallerFrame.ScanWithoutSymbols
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+2017-04-14 15:04:39: stackwalker_mips.cc:395: ERROR:  ScanForReturnAddress failed 
+[       OK ] GetCallerFrame.ScanWithoutSymbols (0 ms)
+[ RUN      ] GetCallerFrame.ScanWithFunctionSymbols
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module2 from memory buffer
+2017-04-14 15:04:39: stackwalker_mips.cc:395: ERROR:  ScanForReturnAddress failed 
+[       OK ] GetCallerFrame.ScanWithFunctionSymbols (0 ms)
+[ RUN      ] GetCallerFrame.CheckStackFrameSizeLimit
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module2|module2
+2017-04-14 15:04:39: stackwalker_mips.cc:395: ERROR:  ScanForReturnAddress failed 
+[       OK ] GetCallerFrame.CheckStackFrameSizeLimit (0 ms)
+[ RUN      ] GetCallerFrame.ScanningNotAllowed
+2017-04-14 15:04:39: stackwalker.cc:98: INFO: Couldn't load symbols for: module1|module1
+[       OK ] GetCallerFrame.ScanningNotAllowed (0 ms)
+[----------] 4 tests from GetCallerFrame (0 ms total)
+
+[----------] 3 tests from CFI
+[ RUN      ] CFI.At4004
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-14 15:04:39: stackwalker_mips.cc:395: ERROR:  ScanForReturnAddress failed 
+[       OK ] CFI.At4004 (0 ms)
+[ RUN      ] CFI.RejectBackwards
+2017-04-14 15:04:39: stackwalker_mips.cc:395: ERROR:  ScanForReturnAddress failed 
+[       OK ] CFI.RejectBackwards (0 ms)
+[ RUN      ] CFI.RejectBadExpressions
+2017-04-14 15:04:39: source_line_resolver_base.cc:236: INFO: Loading symbols for module module1 from memory buffer
+2017-04-14 15:04:39: postfix_evaluator-inl.h:334: INFO: Identifier moot not in dictionary
+2017-04-14 15:04:39: stackwalker_mips.cc:395: ERROR:  ScanForReturnAddress failed 
+[       OK ] CFI.RejectBadExpressions (0 ms)
+[----------] 3 tests from CFI (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 10 tests from 4 test cases ran. (1 ms total)
+[  PASSED  ] 10 tests.
+PASS src/processor/stackwalker_mips64_unittest (exit status: 0)

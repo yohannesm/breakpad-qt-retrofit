@@ -1,0 +1,409 @@
+Running main() from gtest_main.cc
+[==========] Running 175 tests from 17 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from ConstructLabelDeathTest
+[ RUN      ] ConstructLabelDeathTest.Undefined
+[       OK ] ConstructLabelDeathTest.Undefined (108 ms)
+[----------] 1 test from ConstructLabelDeathTest (108 ms total)
+
+[----------] 3 tests from AssignmentDeathTest
+[ RUN      ] AssignmentDeathTest.Self
+[       OK ] AssignmentDeathTest.Self (77 ms)
+[ RUN      ] AssignmentDeathTest.IndirectCycle
+[       OK ] AssignmentDeathTest.IndirectCycle (70 ms)
+[ RUN      ] AssignmentDeathTest.Cycle
+[       OK ] AssignmentDeathTest.Cycle (70 ms)
+[----------] 3 tests from AssignmentDeathTest (217 ms total)
+
+[----------] 1 test from SubtractionDeathTest
+[ RUN      ] SubtractionDeathTest.LabelLabel
+[       OK ] SubtractionDeathTest.LabelLabel (70 ms)
+[----------] 1 test from SubtractionDeathTest (70 ms total)
+
+[----------] 4 tests from EquationDeathTest
+[ RUN      ] EquationDeathTest.EqualConstants
+[       OK ] EquationDeathTest.EqualConstants (0 ms)
+[ RUN      ] EquationDeathTest.EqualIndirectConstants
+[       OK ] EquationDeathTest.EqualIndirectConstants (0 ms)
+[ RUN      ] EquationDeathTest.ConstantClash
+[       OK ] EquationDeathTest.ConstantClash (77 ms)
+[ RUN      ] EquationDeathTest.IndirectConstantClash
+[       OK ] EquationDeathTest.IndirectConstantClash (73 ms)
+[----------] 4 tests from EquationDeathTest (150 ms total)
+
+[----------] 4 tests from ConstructLabel
+[ RUN      ] ConstructLabel.Simple
+[       OK ] ConstructLabel.Simple (0 ms)
+[ RUN      ] ConstructLabel.Undefined
+[       OK ] ConstructLabel.Undefined (0 ms)
+[ RUN      ] ConstructLabel.Constant
+[       OK ] ConstructLabel.Constant (0 ms)
+[ RUN      ] ConstructLabel.Copy
+[       OK ] ConstructLabel.Copy (0 ms)
+[----------] 4 tests from ConstructLabel (0 ms total)
+
+[----------] 12 tests from Assignment
+[ RUN      ] Assignment.UnconstrainedToUnconstrained
+[       OK ] Assignment.UnconstrainedToUnconstrained (0 ms)
+[ RUN      ] Assignment.UnconstrainedToRelated
+[       OK ] Assignment.UnconstrainedToRelated (0 ms)
+[ RUN      ] Assignment.UnconstrainedToKnown
+[       OK ] Assignment.UnconstrainedToKnown (0 ms)
+[ RUN      ] Assignment.RelatedToUnconstrained
+[       OK ] Assignment.RelatedToUnconstrained (0 ms)
+[ RUN      ] Assignment.RelatedToRelated
+[       OK ] Assignment.RelatedToRelated (0 ms)
+[ RUN      ] Assignment.RelatedToKnown
+[       OK ] Assignment.RelatedToKnown (0 ms)
+[ RUN      ] Assignment.KnownToUnconstrained
+[       OK ] Assignment.KnownToUnconstrained (0 ms)
+[ RUN      ] Assignment.KnownToRelated
+[       OK ] Assignment.KnownToRelated (0 ms)
+[ RUN      ] Assignment.KnownToKnown
+[       OK ] Assignment.KnownToKnown (0 ms)
+[ RUN      ] Assignment.ConstantToUnconstrained
+[       OK ] Assignment.ConstantToUnconstrained (0 ms)
+[ RUN      ] Assignment.ConstantToRelated
+[       OK ] Assignment.ConstantToRelated (0 ms)
+[ RUN      ] Assignment.ConstantToKnown
+[       OK ] Assignment.ConstantToKnown (0 ms)
+[----------] 12 tests from Assignment (0 ms total)
+
+[----------] 4 tests from Addition
+[ RUN      ] Addition.LabelConstant
+[       OK ] Addition.LabelConstant (0 ms)
+[ RUN      ] Addition.ConstantLabel
+[       OK ] Addition.ConstantLabel (0 ms)
+[ RUN      ] Addition.KnownLabelConstant
+[       OK ] Addition.KnownLabelConstant (0 ms)
+[ RUN      ] Addition.ConstantKnownLabel
+[       OK ] Addition.ConstantKnownLabel (0 ms)
+[----------] 4 tests from Addition (0 ms total)
+
+[----------] 3 tests from Subtraction
+[ RUN      ] Subtraction.LabelConstant
+[       OK ] Subtraction.LabelConstant (0 ms)
+[ RUN      ] Subtraction.KnownLabelConstant
+[       OK ] Subtraction.KnownLabelConstant (0 ms)
+[ RUN      ] Subtraction.LabelLabel
+[       OK ] Subtraction.LabelLabel (0 ms)
+[----------] 3 tests from Subtraction (0 ms total)
+
+[----------] 3 tests from IsKnownConstant
+[ RUN      ] IsKnownConstant.Undefined
+[       OK ] IsKnownConstant.Undefined (0 ms)
+[ RUN      ] IsKnownConstant.RelatedLabel
+[       OK ] IsKnownConstant.RelatedLabel (0 ms)
+[ RUN      ] IsKnownConstant.Constant
+[       OK ] IsKnownConstant.Constant (0 ms)
+[----------] 3 tests from IsKnownConstant (0 ms total)
+
+[----------] 2 tests from IsKnownOffsetFrom
+[ RUN      ] IsKnownOffsetFrom.Unrelated
+[       OK ] IsKnownOffsetFrom.Unrelated (0 ms)
+[ RUN      ] IsKnownOffsetFrom.Related
+[       OK ] IsKnownOffsetFrom.Related (0 ms)
+[----------] 2 tests from IsKnownOffsetFrom (0 ms total)
+
+[----------] 22 tests from LabelChain
+[ RUN      ] LabelChain.AssignStartRelationBeforeForward
+[       OK ] LabelChain.AssignStartRelationBeforeForward (0 ms)
+[ RUN      ] LabelChain.AssignStartRelationBeforeBackward
+[       OK ] LabelChain.AssignStartRelationBeforeBackward (0 ms)
+[ RUN      ] LabelChain.AssignStartRelationAfterForward
+[       OK ] LabelChain.AssignStartRelationAfterForward (0 ms)
+[ RUN      ] LabelChain.AssignStartRelationAfterBackward
+[       OK ] LabelChain.AssignStartRelationAfterBackward (0 ms)
+[ RUN      ] LabelChain.AssignStartValueBeforeForward
+[       OK ] LabelChain.AssignStartValueBeforeForward (0 ms)
+[ RUN      ] LabelChain.AssignStartValueBeforeBackward
+[       OK ] LabelChain.AssignStartValueBeforeBackward (0 ms)
+[ RUN      ] LabelChain.AssignStartValueAfterForward
+[       OK ] LabelChain.AssignStartValueAfterForward (0 ms)
+[ RUN      ] LabelChain.AssignStartValueAfterBackward
+[       OK ] LabelChain.AssignStartValueAfterBackward (0 ms)
+[ RUN      ] LabelChain.AssignEndRelationBeforeForward
+[       OK ] LabelChain.AssignEndRelationBeforeForward (0 ms)
+[ RUN      ] LabelChain.AssignEndRelationBeforeBackward
+[       OK ] LabelChain.AssignEndRelationBeforeBackward (0 ms)
+[ RUN      ] LabelChain.AssignEndRelationAfterForward
+[       OK ] LabelChain.AssignEndRelationAfterForward (0 ms)
+[ RUN      ] LabelChain.AssignEndRelationAfterBackward
+[       OK ] LabelChain.AssignEndRelationAfterBackward (0 ms)
+[ RUN      ] LabelChain.AssignEndValueBeforeForward
+[       OK ] LabelChain.AssignEndValueBeforeForward (0 ms)
+[ RUN      ] LabelChain.AssignEndValueBeforeBackward
+[       OK ] LabelChain.AssignEndValueBeforeBackward (0 ms)
+[ RUN      ] LabelChain.AssignEndValueAfterForward
+[       OK ] LabelChain.AssignEndValueAfterForward (0 ms)
+[ RUN      ] LabelChain.AssignEndValueAfterBackward
+[       OK ] LabelChain.AssignEndValueAfterBackward (0 ms)
+[ RUN      ] LabelChain.ConstructStartRelationBeforeForward
+[       OK ] LabelChain.ConstructStartRelationBeforeForward (0 ms)
+[ RUN      ] LabelChain.ConstructStartRelationAfterForward
+[       OK ] LabelChain.ConstructStartRelationAfterForward (0 ms)
+[ RUN      ] LabelChain.ConstructStartValueBeforeForward
+[       OK ] LabelChain.ConstructStartValueBeforeForward (0 ms)
+[ RUN      ] LabelChain.ConstructStartValueAfterForward
+[       OK ] LabelChain.ConstructStartValueAfterForward (0 ms)
+[ RUN      ] LabelChain.ConstructEndRelationAfterForward
+[       OK ] LabelChain.ConstructEndRelationAfterForward (0 ms)
+[ RUN      ] LabelChain.ConstructEndValueAfterForward
+[       OK ] LabelChain.ConstructEndValueAfterForward (0 ms)
+[----------] 22 tests from LabelChain (0 ms total)
+
+[----------] 2 tests from LabelTree
+[ RUN      ] LabelTree.KnownValue
+[       OK ] LabelTree.KnownValue (0 ms)
+[ RUN      ] LabelTree.Related
+[       OK ] LabelTree.Related (0 ms)
+[----------] 2 tests from LabelTree (0 ms total)
+
+[----------] 2 tests from LabelReferenceCount
+[ RUN      ] LabelReferenceCount.AssignmentFree
+[       OK ] LabelReferenceCount.AssignmentFree (0 ms)
+[ RUN      ] LabelReferenceCount.FindValueFree
+[       OK ] LabelReferenceCount.FindValueFree (0 ms)
+[----------] 2 tests from LabelReferenceCount (0 ms total)
+
+[----------] 2 tests from ConstructSection
+[ RUN      ] ConstructSection.Simple
+[       OK ] ConstructSection.Simple (0 ms)
+[ RUN      ] ConstructSection.WithEndian
+[       OK ] ConstructSection.WithEndian (0 ms)
+[----------] 2 tests from ConstructSection (0 ms total)
+
+[----------] 102 tests from Append
+[ RUN      ] Append.Bytes
+[       OK ] Append.Bytes (0 ms)
+[ RUN      ] Append.BytesTwice
+[       OK ] Append.BytesTwice (0 ms)
+[ RUN      ] Append.String
+[       OK ] Append.String (0 ms)
+[ RUN      ] Append.CString
+[       OK ] Append.CString (0 ms)
+[ RUN      ] Append.CStringSize
+[       OK ] Append.CStringSize (0 ms)
+[ RUN      ] Append.RepeatedBytes
+[       OK ] Append.RepeatedBytes (0 ms)
+[ RUN      ] Append.GeneralLE1
+[       OK ] Append.GeneralLE1 (0 ms)
+[ RUN      ] Append.GeneralLE2
+[       OK ] Append.GeneralLE2 (0 ms)
+[ RUN      ] Append.GeneralLE3
+[       OK ] Append.GeneralLE3 (0 ms)
+[ RUN      ] Append.GeneralLE4
+[       OK ] Append.GeneralLE4 (0 ms)
+[ RUN      ] Append.GeneralLE5
+[       OK ] Append.GeneralLE5 (0 ms)
+[ RUN      ] Append.GeneralLE6
+[       OK ] Append.GeneralLE6 (0 ms)
+[ RUN      ] Append.GeneralLE7
+[       OK ] Append.GeneralLE7 (0 ms)
+[ RUN      ] Append.GeneralLE8
+[       OK ] Append.GeneralLE8 (0 ms)
+[ RUN      ] Append.GeneralBE1
+[       OK ] Append.GeneralBE1 (0 ms)
+[ RUN      ] Append.GeneralBE2
+[       OK ] Append.GeneralBE2 (0 ms)
+[ RUN      ] Append.GeneralBE3
+[       OK ] Append.GeneralBE3 (0 ms)
+[ RUN      ] Append.GeneralBE4
+[       OK ] Append.GeneralBE4 (0 ms)
+[ RUN      ] Append.GeneralBE5
+[       OK ] Append.GeneralBE5 (0 ms)
+[ RUN      ] Append.GeneralBE6
+[       OK ] Append.GeneralBE6 (0 ms)
+[ RUN      ] Append.GeneralBE7
+[       OK ] Append.GeneralBE7 (0 ms)
+[ RUN      ] Append.GeneralBE8
+[       OK ] Append.GeneralBE8 (0 ms)
+[ RUN      ] Append.GeneralLE1Label
+[       OK ] Append.GeneralLE1Label (0 ms)
+[ RUN      ] Append.GeneralLE2Label
+[       OK ] Append.GeneralLE2Label (0 ms)
+[ RUN      ] Append.GeneralLE3Label
+[       OK ] Append.GeneralLE3Label (0 ms)
+[ RUN      ] Append.GeneralLE4Label
+[       OK ] Append.GeneralLE4Label (0 ms)
+[ RUN      ] Append.GeneralLE5Label
+[       OK ] Append.GeneralLE5Label (0 ms)
+[ RUN      ] Append.GeneralLE6Label
+[       OK ] Append.GeneralLE6Label (0 ms)
+[ RUN      ] Append.GeneralLE7Label
+[       OK ] Append.GeneralLE7Label (0 ms)
+[ RUN      ] Append.GeneralLE8Label
+[       OK ] Append.GeneralLE8Label (0 ms)
+[ RUN      ] Append.GeneralBE1Label
+[       OK ] Append.GeneralBE1Label (0 ms)
+[ RUN      ] Append.GeneralBE2Label
+[       OK ] Append.GeneralBE2Label (0 ms)
+[ RUN      ] Append.GeneralBE3Label
+[       OK ] Append.GeneralBE3Label (0 ms)
+[ RUN      ] Append.GeneralBE4Label
+[       OK ] Append.GeneralBE4Label (0 ms)
+[ RUN      ] Append.GeneralBE5Label
+[       OK ] Append.GeneralBE5Label (0 ms)
+[ RUN      ] Append.GeneralBE6Label
+[       OK ] Append.GeneralBE6Label (0 ms)
+[ RUN      ] Append.GeneralBE7Label
+[       OK ] Append.GeneralBE7Label (0 ms)
+[ RUN      ] Append.GeneralBE8Label
+[       OK ] Append.GeneralBE8Label (0 ms)
+[ RUN      ] Append.B8
+[       OK ] Append.B8 (0 ms)
+[ RUN      ] Append.B8Label
+[       OK ] Append.B8Label (0 ms)
+[ RUN      ] Append.B16
+[       OK ] Append.B16 (0 ms)
+[ RUN      ] Append.B16Label
+[       OK ] Append.B16Label (0 ms)
+[ RUN      ] Append.B32
+[       OK ] Append.B32 (0 ms)
+[ RUN      ] Append.B32Label
+[       OK ] Append.B32Label (0 ms)
+[ RUN      ] Append.B64
+[       OK ] Append.B64 (0 ms)
+[ RUN      ] Append.B64Label
+[       OK ] Append.B64Label (0 ms)
+[ RUN      ] Append.L8
+[       OK ] Append.L8 (0 ms)
+[ RUN      ] Append.L8Label
+[       OK ] Append.L8Label (0 ms)
+[ RUN      ] Append.L16
+[       OK ] Append.L16 (0 ms)
+[ RUN      ] Append.L16Label
+[       OK ] Append.L16Label (0 ms)
+[ RUN      ] Append.L32
+[       OK ] Append.L32 (0 ms)
+[ RUN      ] Append.L32Label
+[       OK ] Append.L32Label (0 ms)
+[ RUN      ] Append.L64
+[       OK ] Append.L64 (0 ms)
+[ RUN      ] Append.L64Label
+[       OK ] Append.L64Label (0 ms)
+[ RUN      ] Append.D8Big
+[       OK ] Append.D8Big (0 ms)
+[ RUN      ] Append.D8BigLabel
+[       OK ] Append.D8BigLabel (0 ms)
+[ RUN      ] Append.D16Big
+[       OK ] Append.D16Big (0 ms)
+[ RUN      ] Append.D16BigLabel
+[       OK ] Append.D16BigLabel (0 ms)
+[ RUN      ] Append.D32Big
+[       OK ] Append.D32Big (0 ms)
+[ RUN      ] Append.D32BigLabel
+[       OK ] Append.D32BigLabel (0 ms)
+[ RUN      ] Append.D64Big
+[       OK ] Append.D64Big (0 ms)
+[ RUN      ] Append.D64BigLabel
+[       OK ] Append.D64BigLabel (0 ms)
+[ RUN      ] Append.D8Little
+[       OK ] Append.D8Little (0 ms)
+[ RUN      ] Append.D8LittleLabel
+[       OK ] Append.D8LittleLabel (0 ms)
+[ RUN      ] Append.D16Little
+[       OK ] Append.D16Little (0 ms)
+[ RUN      ] Append.D16LittleLabel
+[       OK ] Append.D16LittleLabel (0 ms)
+[ RUN      ] Append.D32Little
+[       OK ] Append.D32Little (0 ms)
+[ RUN      ] Append.D32LittleLabel
+[       OK ] Append.D32LittleLabel (0 ms)
+[ RUN      ] Append.D64Little
+[       OK ] Append.D64Little (0 ms)
+[ RUN      ] Append.D64LittleLabel
+[       OK ] Append.D64LittleLabel (0 ms)
+[ RUN      ] Append.Variety
+[       OK ] Append.Variety (0 ms)
+[ RUN      ] Append.Section
+[       OK ] Append.Section (0 ms)
+[ RUN      ] Append.SectionRefs
+[       OK ] Append.SectionRefs (0 ms)
+[ RUN      ] Append.LEB128_0
+[       OK ] Append.LEB128_0 (0 ms)
+[ RUN      ] Append.LEB128_0x3f
+[       OK ] Append.LEB128_0x3f (0 ms)
+[ RUN      ] Append.LEB128_0x40
+[       OK ] Append.LEB128_0x40 (0 ms)
+[ RUN      ] Append.LEB128_0x7f
+[       OK ] Append.LEB128_0x7f (0 ms)
+[ RUN      ] Append.LEB128_0x80
+[       OK ] Append.LEB128_0x80 (0 ms)
+[ RUN      ] Append.LEB128_0xff
+[       OK ] Append.LEB128_0xff (0 ms)
+[ RUN      ] Append.LEB128_0x1fff
+[       OK ] Append.LEB128_0x1fff (0 ms)
+[ RUN      ] Append.LEB128_0x2000
+[       OK ] Append.LEB128_0x2000 (0 ms)
+[ RUN      ] Append.LEB128_n1
+[       OK ] Append.LEB128_n1 (0 ms)
+[ RUN      ] Append.LEB128_n0x40
+[       OK ] Append.LEB128_n0x40 (0 ms)
+[ RUN      ] Append.LEB128_n0x41
+[       OK ] Append.LEB128_n0x41 (0 ms)
+[ RUN      ] Append.LEB128_n0x7f
+[       OK ] Append.LEB128_n0x7f (0 ms)
+[ RUN      ] Append.LEB128_n0x80
+[       OK ] Append.LEB128_n0x80 (0 ms)
+[ RUN      ] Append.LEB128_n0x2000
+[       OK ] Append.LEB128_n0x2000 (0 ms)
+[ RUN      ] Append.LEB128_n0x2001
+[       OK ] Append.LEB128_n0x2001 (0 ms)
+[ RUN      ] Append.ULEB128_0
+[       OK ] Append.ULEB128_0 (0 ms)
+[ RUN      ] Append.ULEB128_1
+[       OK ] Append.ULEB128_1 (0 ms)
+[ RUN      ] Append.ULEB128_0x3f
+[       OK ] Append.ULEB128_0x3f (0 ms)
+[ RUN      ] Append.ULEB128_0x40
+[       OK ] Append.ULEB128_0x40 (0 ms)
+[ RUN      ] Append.ULEB128_0x7f
+[       OK ] Append.ULEB128_0x7f (0 ms)
+[ RUN      ] Append.ULEB128_0x80
+[       OK ] Append.ULEB128_0x80 (0 ms)
+[ RUN      ] Append.ULEB128_0xff
+[       OK ] Append.ULEB128_0xff (0 ms)
+[ RUN      ] Append.ULEB128_0x100
+[       OK ] Append.ULEB128_0x100 (0 ms)
+[ RUN      ] Append.ULEB128_0x1fff
+[       OK ] Append.ULEB128_0x1fff (0 ms)
+[ RUN      ] Append.ULEB128_0x2000
+[       OK ] Append.ULEB128_0x2000 (0 ms)
+[ RUN      ] Append.ULEB128_0x3fff
+[       OK ] Append.ULEB128_0x3fff (0 ms)
+[ RUN      ] Append.ULEB128_0x4000
+[       OK ] Append.ULEB128_0x4000 (0 ms)
+[ RUN      ] Append.ULEB128_12857
+[       OK ] Append.ULEB128_12857 (0 ms)
+[ RUN      ] Append.LEBChain
+[       OK ] Append.LEBChain (0 ms)
+[----------] 102 tests from Append (0 ms total)
+
+[----------] 3 tests from GetContents
+[ RUN      ] GetContents.Undefined
+Undefined label #0 at offset 0x0
+[       OK ] GetContents.Undefined (0 ms)
+[ RUN      ] GetContents.ClearsContents
+[       OK ] GetContents.ClearsContents (0 ms)
+[ RUN      ] GetContents.ClearsReferences
+[       OK ] GetContents.ClearsReferences (0 ms)
+[----------] 3 tests from GetContents (1 ms total)
+
+[----------] 5 tests from Miscellanea
+[ RUN      ] Miscellanea.Clear
+[       OK ] Miscellanea.Clear (0 ms)
+[ RUN      ] Miscellanea.Align
+[       OK ] Miscellanea.Align (0 ms)
+[ RUN      ] Miscellanea.AlignPad
+[       OK ] Miscellanea.AlignPad (0 ms)
+[ RUN      ] Miscellanea.StartHereMark
+[       OK ] Miscellanea.StartHereMark (0 ms)
+[ RUN      ] Miscellanea.Endianness
+[       OK ] Miscellanea.Endianness (0 ms)
+[----------] 5 tests from Miscellanea (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 175 tests from 17 test cases ran. (546 ms total)
+[  PASSED  ] 175 tests.
+PASS src/common/test_assembler_unittest (exit status: 0)

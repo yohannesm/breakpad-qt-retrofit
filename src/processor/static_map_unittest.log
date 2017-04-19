@@ -1,0 +1,30 @@
+[==========] Running 7 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 3 tests from TestInvalidMap
+[ RUN      ] TestInvalidMap.TestNegativeNumberNodes
+2017-04-14 15:04:39: static_map-inl.h:129: INFO: StaticMap check failed: negative number of nodes
+[       OK ] TestInvalidMap.TestNegativeNumberNodes (0 ms)
+[ RUN      ] TestInvalidMap.TestWrongOffsets
+2017-04-14 15:04:39: static_map-inl.h:143: INFO: StaticMap check failed: first node offset is incorrect
+2017-04-14 15:04:39: static_map-inl.h:151: INFO: StaticMap check failed: node offsets non-increasing
+[       OK ] TestInvalidMap.TestWrongOffsets (0 ms)
+[ RUN      ] TestInvalidMap.TestUnSortedKeys
+2017-04-14 15:04:39: static_map-inl.h:157: INFO: StaticMap check failed: node keys non-increasing
+[       OK ] TestInvalidMap.TestUnSortedKeys (0 ms)
+[----------] 3 tests from TestInvalidMap (0 ms total)
+
+[----------] 4 tests from TestValidMap
+[ RUN      ] TestValidMap.TestEmptyMap
+[       OK ] TestValidMap.TestEmptyMap (1 ms)
+[ RUN      ] TestValidMap.TestSingleElement
+[       OK ] TestValidMap.TestSingleElement (0 ms)
+[ RUN      ] TestValidMap.Test100Elements
+[       OK ] TestValidMap.Test100Elements (1 ms)
+[ RUN      ] TestValidMap.Test1000RandomElements
+[       OK ] TestValidMap.Test1000RandomElements (3 ms)
+[----------] 4 tests from TestValidMap (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 2 test cases ran. (5 ms total)
+[  PASSED  ] 7 tests.
+PASS src/processor/static_map_unittest (exit status: 0)
